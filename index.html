@@ -14,7 +14,9 @@
       <a href="/" class="masthead-name">George Gondron</a>
       <ul class="masthead-nav">
         <li><a href="#writings">Writings</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><button id="theme-btn">☽ Dark</button></li>
       </ul>
     </div>
@@ -22,7 +24,7 @@
 
   <main>
 
-    <!-- Hero: text only, no photo here -->
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-eyebrow">Essays · Poems · Haikus</div>
       <h1 class="hero-title">A Lifetime of Thought,<br>Written Down</h1>
@@ -32,24 +34,46 @@
       <cite class="hero-cite">— George Gondron, <em>Yearning</em></cite>
       <div class="hero-actions">
         <button id="random-btn" class="btn btn-filled">Read Something</button>
-        <a href="#writings" class="btn btn-ghost">Browse All 698 Writings</a>
+        <a href="#writings" class="btn btn-ghost">Browse All Writings</a>
       </div>
     </section>
 
     <hr class="rule">
 
-    <!-- Writings list -->
+    <!-- Writings: categorized + alphabetical accordion -->
     <section class="browse" id="writings">
+
       <div class="browse-header">
-        <h2>All Writings</h2>
+        <h2>Writings</h2>
         <input type="text" id="search-box" class="search-box" placeholder="Search titles…">
       </div>
-      <div class="writings-list" id="writings-list">
-        <p style="padding:2rem 0; color:#999;">Loading writings…</p>
+
+      <!-- Category filter pills -->
+      <div class="filter-pills">
+        <button class="pill active" data-filter="all">All <span class="pill-count" id="count-all"></span></button>
+        <button class="pill" data-filter="essay">Essays <span class="pill-count" id="count-essay"></span></button>
+        <button class="pill" data-filter="poem">Poems <span class="pill-count" id="count-poem"></span></button>
+        <button class="pill" data-filter="haiku">Haikus <span class="pill-count" id="count-haiku"></span></button>
+      </div>
+
+      <!-- Alphabetical accordion -->
+      <div id="writings-accordion"></div>
+
+    </section>
+
+    <hr class="rule">
+
+    <!-- Blog -->
+    <section class="blog-section" id="blog">
+      <div class="section-inner">
+        <h2 class="section-heading">Blog</h2>
+        <div id="blog-list"></div>
       </div>
     </section>
 
-    <!-- About — photo appears here ONLY -->
+    <hr class="rule">
+
+    <!-- About -->
     <section class="about" id="about">
       <div class="about-inner">
         <div class="about-photo">
@@ -57,22 +81,25 @@
         </div>
         <div class="about-text">
           <h2>About George Gondron</h2>
-          <p>
-            George Gondron has spent decades exploring the philosophical and 
-            spiritual dimensions of human experience. His writings reflect a 
-            lifetime of observation, introspection, and deep dialogue with 
-            the enduring questions of existence.
-          </p>
-          <p>
-            Through essays, poems, and reflections, George examines the questions 
-            most of us push aside: What does it mean to be conscious? How do we 
-            grow beyond our limitations? How do we live authentically?
-          </p>
-          <p>
-            This archive is a gift freely shared — a lifetime of thinking, 
-            written down for anyone who seeks deeper understanding.
-          </p>
+          <p>George Gondron has spent decades exploring the philosophical and spiritual dimensions of human experience. His writings reflect a lifetime of observation, introspection, and dialogue with the enduring questions of existence.</p>
+          <p>Through essays, poems, and reflections, George examines the questions most of us push aside: What does it mean to be conscious? How do we grow beyond our limitations? How do we live authentically?</p>
+          <p>This archive is a gift freely shared — a lifetime of thinking, written down for anyone who seeks deeper understanding.</p>
         </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="section-inner" style="text-align:center;">
+        <h2 class="section-heading">Contact</h2>
+        <p style="color:var(--ink-mid); margin-bottom:1.5rem;">
+          George welcomes thoughtful correspondence from readers.
+        </p>
+        <a href="mailto:ggondron@hotmail.com" class="btn btn-filled">
+          ✉ ggondron@hotmail.com
+        </a>
       </div>
     </section>
 
@@ -81,7 +108,11 @@
   <footer class="footer">
     <p class="footer-name">George Gondron — Writings & Reflections</p>
     <p>698 essays, poems, and haikus · Updated March 2026</p>
-    <p style="margin-top:1rem;"><a href="https://github.com/blankjw/George-writings">View on GitHub</a></p>
+    <p style="margin-top:.8rem;">
+      <a href="mailto:ggondron@hotmail.com">ggondron@hotmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/blankjw/George-writings">GitHub</a>
+    </p>
   </footer>
 
   <script src="js/app.js"></script>
