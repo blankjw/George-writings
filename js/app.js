@@ -1,10 +1,51 @@
 // George Gondron Writings Archive - Interactive Features
 
+let allEssays = [];
+
 document.addEventListener('DOMContentLoaded', function() {
+  loadEssays();
   initThemeToggle();
-  initSearch();
   initRandomEssay();
 });
+
+// Load essays from JSON and populate grid
+async function loadEssays() {
+  try {
+    const response = await fetch('essays.json');
+    const essays = await response.json();
+    allEssays = essays;
+    
+    renderEssays(essays);
+    initSearch();
+  } catch (error) {
+    console.error('Error loading essays:', error);
+  }
+}
+
+function renderEssays(essays) {
+  const grid = document.getElementById('essays-grid');
+  if (!grid) return;
+  
+  // Clear dummy essays
+  grid.innerHTML = '';
+  
+  essays.forEach(essay => {
+    const card = document.createElement('div');
+    card.className = 'essay-card';
+    
+    const typeClass = essay.category ? essay.category.toLowerCase() : 'essay';
+    const typeLabel = essay.category ? essay.category.toUpperCase() : 'ESSAY';
+    
+    card.innerHTML = `
+      <span class="essay-type">${typeLabel}</span>
+      <h3>${essay.title}</h3>
+      <p class="essay-preview">${essay.excerpt || essay.content.substring(0, 150)}...</p>
+      <a href="essays/${essay.slug}.html" class="read-more" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+    `;
+    
+    grid.appendChild(card);
+  });
+}
 
 // Dark Mode Toggle
 function initThemeToggle() {
@@ -81,13 +122,11 @@ function updateNoResults(show) {
 // Random Essay Generator
 function initRandomEssay() {
   const randomBtn = document.getElementById('random-btn');
-  const essayCards = document.querySelectorAll('.essay-card');
   
-  if (randomBtn && essayCards.length > 0) {
+  if (randomBtn && allEssays.length > 0) {
     randomBtn.addEventListener('click', function() {
-      const randomCard = essayCards[Math.floor(Math.random() * essayCards.length)];
-      randomCard.click();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const randomEssay = allEssays[Math.floor(Math.random() * allEssays.length)];
+      window.location.href = `essays/${randomEssay.slug}.html`;
     });
   }
 }

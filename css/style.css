@@ -1,460 +1,696 @@
-/* George Gondron Writings Archive - Personal & Elegant */
+/* George Gondron Writings Archive — Elegant Design */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ============================================================
+   FONTS
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
 
+/* ============================================================
+   VARIABLES
+   ============================================================ */
 :root {
-  --cream: #f9f7f4;
-  --sage: #a8b5a4;
-  --gold: #d4a574;
-  --dark-text: #2c2c2c;
-  --light-text: #5a5a5a;
-  --border: #e8e3de;
-  
-  --dark-bg: #1a1a1a;
-  --dark-card: #2a2a2a;
-  --dark-border: #404040;
-}
+  --cream: #faf8f5;
+  --cream-dark: #f0ebe2;
+  --gold: #b8893a;
+  --gold-light: #d4a85a;
+  --sage: #5c7a5c;
+  --sage-light: #7a9e7a;
+  --text: #1c1c1c;
+  --text-light: #5a5552;
+  --text-muted: #9a9490;
+  --border: #e0d9d0;
+  --white: #ffffff;
+  --shadow: rgba(0,0,0,0.06);
+  --shadow-deep: rgba(0,0,0,0.14);
 
-body {
-  font-family: 'Georgia', 'Garamond', serif;
-  background-color: var(--cream);
-  color: var(--dark-text);
-  line-height: 1.8;
-  font-size: 16px;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lato', 'Helvetica Neue', sans-serif;
 }
 
 body.dark-mode {
-  background-color: var(--dark-bg);
-  color: #e0e0e0;
+  --cream: #141210;
+  --cream-dark: #1e1b18;
+  --gold: #d4a85a;
+  --gold-light: #e8c070;
+  --sage: #7a9e7a;
+  --sage-light: #8fb88f;
+  --text: #ede8e2;
+  --text-light: #b0a898;
+  --text-muted: #706860;
+  --border: #302c28;
+  --white: #1e1b18;
+  --shadow: rgba(0,0,0,0.3);
+  --shadow-deep: rgba(0,0,0,0.5);
 }
 
-/* Header & Navigation */
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 300;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
 header {
-  background-color: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--cream);
   border-bottom: 1px solid var(--border);
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-}
-
-body.dark-mode header {
-  background-color: var(--dark-card);
-  border-bottom-color: var(--dark-border);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 nav {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 2rem;
+  height: 68px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .site-title {
-  font-size: 1.8rem;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
   font-weight: 400;
-  letter-spacing: 1px;
-  color: var(--dark-text);
-}
-
-body.dark-mode .site-title {
-  color: #f0f0f0;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  white-space: nowrap;
 }
 
 .nav-links {
-  display: flex;
-  gap: 2rem;
   list-style: none;
+  display: flex;
+  gap: 2.5rem;
 }
 
 .nav-links a {
+  color: var(--text-light);
   text-decoration: none;
-  color: var(--light-text);
-  transition: color 0.3s;
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
   color: var(--gold);
 }
 
-body.dark-mode .nav-links a {
-  color: #b0b0b0;
-}
-
 .theme-toggle {
   background: none;
-  border: 1px solid var(--sage);
-  color: var(--sage);
-  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: all 0.3s;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .theme-toggle:hover {
-  background-color: var(--sage);
-  color: var(--cream);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
-body.dark-mode .theme-toggle {
-  border-color: #888;
-  color: #888;
-}
-
-body.dark-mode .theme-toggle:hover {
-  background-color: #888;
-  color: var(--dark-bg);
-}
-
-/* Main Content */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Homepage */
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
   text-align: center;
-  margin: 3rem 0;
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(168, 181, 164, 0.1) 100%);
-  border-radius: 8px;
-}
-
-body.dark-mode .hero {
-  background: linear-gradient(135deg, rgba(212, 165, 116, 0.05) 0%, rgba(168, 181, 164, 0.05) 100%);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--dark-text);
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
   font-weight: 400;
-  letter-spacing: 0.5px;
-}
-
-body.dark-mode .hero h1 {
-  color: #f0f0f0;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.01em;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  color: var(--light-text);
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--text-light);
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 580px;
+  margin: 0 auto;
 }
 
-body.dark-mode .hero p {
-  color: #b0b0b0;
-}
-
-/* Stats */
+/* ============================================================
+   STATS BAR
+   ============================================================ */
 .stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--cream-dark);
+  transition: background 0.3s;
+}
+
+.stats-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.2rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 .stat {
-  padding: 1.5rem;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-body.dark-mode .stat {
-  background: var(--dark-card);
-  border-color: var(--dark-border);
+  text-align: center;
 }
 
 .stat-number {
+  font-family: var(--font-serif);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.9rem;
-  color: var(--light-text);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
 }
 
-body.dark-mode .stat-label {
-  color: #999;
-}
-
-/* Featured Essay */
+/* ============================================================
+   FEATURED / INTRO
+   ============================================================ */
 .featured {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 2rem;
-  margin: 2rem 0;
-  border-radius: 4px;
-}
-
-body.dark-mode .featured {
-  background: var(--dark-card);
-  border-color: var(--dark-border);
+  max-width: 760px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 .featured h2 {
-  color: var(--dark-text);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
   font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1.5rem;
 }
 
-body.dark-mode .featured h2 {
-  color: #f0f0f0;
+.featured p {
+  color: var(--text-light);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 1.9;
 }
 
-.featured .essay-preview {
-  color: var(--light-text);
-  margin: 1rem 0;
-  line-height: 1.8;
+.featured-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-body.dark-mode .featured .essay-preview {
-  color: #b0b0b0;
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
 }
 
+.btn-gold {
+  background: var(--gold);
+  color: #fff;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(184,137,58,0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-light);
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Legacy compatibility */
 .read-more {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--sage);
-  color: white;
+  padding: 0.55rem 1.4rem;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
 }
 
 .read-more:hover {
   background: var(--gold);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-/* Browse Section */
+/* ============================================================
+   BROWSE / SEARCH
+   ============================================================ */
 .browse-section {
-  margin: 3rem 0;
+  max-width: 1100px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+
+.browse-section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .search-box {
   width: 100%;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  max-width: 520px;
+  display: block;
+  margin: 0 0 2.5rem;
+  padding: 0.8rem 1.2rem;
   border: 1px solid var(--border);
-  border-radius: 4px;
-  font-family: 'Georgia', serif;
-  font-size: 1rem;
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
 }
 
-body.dark-mode .search-box {
-  background: var(--dark-card);
-  border-color: var(--dark-border);
-  color: #e0e0e0;
+.search-box:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184,137,58,0.12);
 }
 
+.search-box::placeholder {
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   ESSAY GRID
+   ============================================================ */
 .essays-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
 }
 
 .essay-card {
-  background: white;
+  background: var(--white);
   border: 1px solid var(--border);
-  padding: 1.5rem;
   border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-body.dark-mode .essay-card {
-  background: var(--dark-card);
-  border-color: var(--dark-border);
+  padding: 1.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .essay-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px var(--shadow-deep);
   border-color: var(--gold);
-  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.15);
-}
-
-.essay-card h3 {
-  color: var(--dark-text);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-body.dark-mode .essay-card h3 {
-  color: #f0f0f0;
 }
 
 .essay-type {
-  display: inline-block;
-  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--sage);
-  margin-bottom: 0.5rem;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.essay-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
 }
 
 .essay-preview {
-  color: var(--light-text);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0.5rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 300;
+  line-height: 1.7;
+  flex: 1;
 }
 
-body.dark-mode .essay-preview {
-  color: #b0b0b0;
+.essay-card a.read-more {
+  margin-top: 1.2rem;
+  align-self: flex-start;
 }
 
-/* Individual Essay Page */
-.essay-content {
-  background: white;
-  padding: 2rem;
-  margin: 2rem 0;
-  border-radius: 4px;
-  border: 1px solid var(--border);
-}
-
-body.dark-mode .essay-content {
-  background: var(--dark-card);
-  border-color: var(--dark-border);
-}
-
-.essay-header {
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about-section {
+  background: var(--cream-dark);
+  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  padding: 5rem 2rem;
+  margin: 4rem 0;
+  transition: background 0.3s;
 }
 
-body.dark-mode .essay-header {
-  border-bottom-color: var(--dark-border);
+.about-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 5rem;
+  align-items: center;
 }
 
-.essay-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.about-section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
   font-weight: 400;
-  color: var(--dark-text);
-}
-
-body.dark-mode .essay-title {
-  color: #f0f0f0;
-}
-
-.essay-meta {
-  color: var(--light-text);
-  font-size: 0.95rem;
-}
-
-body.dark-mode .essay-meta {
-  color: #999;
-}
-
-.essay-text {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: var(--dark-text);
-}
-
-body.dark-mode .essay-text {
-  color: #e0e0e0;
-}
-
-.essay-text p {
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 
-/* Sharing */
-.share-buttons {
-  display: flex;
-  gap: 1rem;
-  margin: 2rem 0;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+.about-text p {
+  color: var(--text-light);
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 1rem;
 }
 
-body.dark-mode .share-buttons {
-  border-color: var(--dark-border);
-}
-
-.share-btn {
-  padding: 0.75rem 1.5rem;
-  background: var(--sage);
-  color: white;
-  text-decoration: none;
+.about-photo {
+  width: 100%;
   border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-size: 0.9rem;
+  box-shadow: 0 12px 40px var(--shadow-deep);
 }
 
-.share-btn:hover {
-  background: var(--gold);
-}
-
-/* Footer */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 footer {
-  background: var(--cream);
+  background: var(--cream-dark);
   border-top: 1px solid var(--border);
-  padding: 2rem 1rem;
-  margin-top: 4rem;
+  padding: 3rem 2rem;
   text-align: center;
-  color: var(--light-text);
-  font-size: 0.9rem;
+  transition: background 0.3s;
 }
 
-body.dark-mode footer {
-  background: var(--dark-card);
-  border-top-color: var(--dark-border);
-  color: #999;
+.footer-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+}
+
+footer p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  margin-top: 0.4rem;
 }
 
 footer a {
-  color: var(--sage);
+  color: var(--gold);
   text-decoration: none;
 }
 
 footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   INDIVIDUAL ESSAY PAGE
+   ============================================================ */
+.essay-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.essay-page .essay-type {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.essay-page h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.essay-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.essay-content {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.essay-content p {
+  margin-bottom: 1.4em;
+}
+
+.essay-share {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.essay-share span {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
   color: var(--gold);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .site-title {
-    font-size: 1.3rem;
-  }
-  
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
   .nav-links {
-    gap: 1rem;
-    font-size: 0.85rem;
+    display: none;
   }
-  
-  .hero h1 {
-    font-size: 1.8rem;
+
+  nav {
+    padding: 0 1.2rem;
   }
-  
+
+  .hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .stats-inner {
+    gap: 2rem;
+    padding: 1.8rem 1.5rem;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-photo {
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+  }
+
   .essays-grid {
     grid-template-columns: 1fr;
   }
-  
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+
+  .browse-section,
+  .featured {
+    padding: 0 1.5rem;
   }
+}
+
+/* ============================================================
+   ESSAY PAGE ARTICLE LAYOUT (generated pages)
+   ============================================================ */
+article.essay-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.back-nav {
+  margin-bottom: 2rem;
+}
+
+.back-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back-nav a:hover {
+  color: var(--gold);
+}
+
+.essay-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.essay-header .essay-type {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.essay-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.essay-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.essay-text {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--text);
+}
+
+.essay-text p {
+  margin-bottom: 1.5em;
+  white-space: pre-line;
+}
+
+.essay-actions {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
