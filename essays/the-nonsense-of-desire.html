@@ -6,6 +6,59 @@
   <meta name="description" content="THE NONSENSE OF DESIRE - George Gondron">
   <title>THE NONSENSE OF DESIRE - George Gondron Writings</title>
   <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -80,9 +133,12 @@ They patiently wait</p>
         <a href="javascript:shareEmail('THE NONSENSE OF DESIRE', window.location.href)" class="share-btn">Share via Email</a>
       </div>
 
-      <div style="text-align: center; margin: 2rem 0;">
-        <a href="../" class="read-more">← Back to All Writings</a>
-      </div>
+
+  <nav class="pn-nav">
+    <a href="the-next-breath.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">THE NEXT BREATH</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="the-one-we-can-never-leave.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">THE ONE WE CAN NEVER LEAVE</span></a>
+  </nav>
     </article>
   </main>
 
