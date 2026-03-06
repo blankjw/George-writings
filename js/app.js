@@ -208,3 +208,21 @@ function initTheme() {
     btn.textContent = isDark ? '☀ Light' : '☽ Dark';
   });
 }
+
+// ─── Share Functions ──────────────────────────────────────────
+function shareTwitter(title, url) {
+  const text = encodeURIComponent(`"${title}" — George Gondron`);
+  const u = encodeURIComponent(url);
+  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${u}`, '_blank');
+}
+
+function shareFacebook(url) {
+  const u = encodeURIComponent(url);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${u}`, '_blank');
+}
+
+function shareEmail(title, url) {
+  const subject = encodeURIComponent(`"${title}" — George Gondron`);
+  const body = encodeURIComponent(`I thought you might enjoy this writing by George Gondron:\n\n${url}`);
+  window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
