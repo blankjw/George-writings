@@ -627,3 +627,32 @@ a:hover { color: var(--gold-hover); }
 a.writing-row {
   text-decoration: none;
 }
+
+/* ── Padding / edge fixes ── */
+.browse {
+  padding-left: max(2rem, env(safe-area-inset-left, 1.5rem)) !important;
+  padding-right: max(2rem, env(safe-area-inset-right, 1.5rem)) !important;
+}
+.writing-row {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+.writing-body {
+  min-width: 0;
+  overflow: hidden;
+}
+.writing-title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .browse {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+  }
+  .writing-row {
+    padding: 1.4rem 0;
+  }
+}
