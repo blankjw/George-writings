@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="George Gondron Writings - Essays, poems, and philosophical reflections on life, spirituality, and human consciousness.">
+  <title>George Gondron Writings Archive</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title">George Gondron</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#browse">Browse</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>Writings & Reflections</h1>
+      <p>Philosophical essays, poems, and meditations on consciousness, spirituality, and what it means to be human</p>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-number">703</div>
+        <div class="stat-label">Total Writings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">630</div>
+        <div class="stat-label">Essays</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50</div>
+        <div class="stat-label">Poems</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Haikus</div>
+      </div>
+    </section>
+
+    <!-- Featured Essay -->
+    <section class="featured">
+      <h2>Featured Essay</h2>
+      <p class="essay-preview">
+        Explore a complete collection of philosophical writings spanning decades. 
+        Each essay reflects on the human condition, spiritual growth, and the search for meaning in an ever-changing world.
+      </p>
+      <p class="essay-preview">
+        George Gondron's work is characterized by deep introspection, compassionate observation of human nature, 
+        and a commitment to questioning assumptions about consciousness, morality, and our place in the universe.
+      </p>
+      <button id="random-btn" class="read-more">📖 Read Random Essay</button>
+      <a href="#browse" class="read-more" style="margin-left: 1rem;">Browse All</a>
+    </section>
+
+    <!-- Browse Essays -->
+    <section class="browse-section" id="browse">
+      <h2>Browse Essays</h2>
+      <input 
+        type="text" 
+        id="search-box" 
+        class="search-box" 
+        placeholder="Search by title, theme, or keyword..."
+      >
+      
+      <div class="essays-grid" id="essays-grid">
+        <!-- Essays will be loaded here by build.py -->
+        
+        <!-- Sample Essay Card -->
+        <div class="essay-card">
+          <span class="essay-type">Essay</span>
+          <h3>The Nature of Consciousness</h3>
+          <p class="essay-preview">
+            A meditation on what consciousness means and how it shapes our experience of reality...
+          </p>
+          <a href="#" class="read-more" style="display: inline-block; margin-top: 1rem;">Read More</a>
+        </div>
+        
+        <div class="essay-card">
+          <span class="essay-type">Essay</span>
+          <h3>Finding Meaning in Uncertainty</h3>
+          <p class="essay-preview">
+            Exploring how we create meaning in a world that often feels chaotic and unpredictable...
+          </p>
+          <a href="#" class="read-more" style="display: inline-block; margin-top: 1rem;">Read More</a>
+        </div>
+        
+        <div class="essay-card">
+          <span class="essay-type">Poem</span>
+          <h3>Morning Reflections</h3>
+          <p class="essay-preview">
+            A brief poetic meditation on the quiet moments before the day begins...
+          </p>
+          <a href="#" class="read-more" style="display: inline-block; margin-top: 1rem;">Read More</a>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="margin: 4rem 0; padding: 2rem; background: white; border-radius: 4px; border: 1px solid #e8e3de;">
+      <style>
+        body.dark-mode #about {
+          background: #2a2a2a;
+          border-color: #404040;
+        }
+      </style>
+      <h2 style="margin-bottom: 1.5rem; color: #2c2c2c;">About George Gondron</h2>
+      <p style="margin-bottom: 1rem; color: #5a5a5a;">
+        George Gondron has spent decades exploring the philosophical and spiritual dimensions of human experience. 
+        His writings reflect a lifetime of observation, introspection, and dialogue with the great thinkers of humanity.
+      </p>
+      <p style="margin-bottom: 1rem; color: #5a5a5a;">
+        Through essays, poems, and reflections, George examines timeless questions: 
+        What does it mean to be conscious? How do we grow? What responsibilities do we have to each other? 
+        How can we live authentically in a world of illusions?
+      </p>
+      <p style="color: #5a5a5a;">
+        This archive represents a gift freely shared—a lifetime of thinking, written down for anyone seeking 
+        deeper understanding of themselves and the world.
+      </p>
+      
+      <style>
+        body.dark-mode #about {
+          color: #e0e0e0;
+        }
+        
+        body.dark-mode #about p {
+          color: #b0b0b0;
+        }
+      </style>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      George Gondron Writings Archive | 
+      <a href="https://github.com" target="_blank">GitHub</a>
+    </p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+      A collection of philosophical essays, poems, and reflections | 
+      Updated March 2026
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
