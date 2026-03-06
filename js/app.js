@@ -1,162 +1,103 @@
-// George Gondron Writings Archive - Interactive Features
+// George Gondron Writings Archive
 
 let allEssays = [];
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   loadEssays();
-  initThemeToggle();
-  initRandomEssay();
+  initTheme();
+  initSearch();
 });
 
-// Load essays from JSON and populate grid
+// ─── Load Essays ─────────────────────────────────────────────
 async function loadEssays() {
   try {
-    const response = await fetch('essays.json');
-    const essays = await response.json();
-    allEssays = essays;
-    
-    renderEssays(essays);
-    initSearch();
-  } catch (error) {
-    console.error('Error loading essays:', error);
+    const res = await fetch('essays.json');
+    allEssays = await res.json();
+    renderList(allEssays);
+    initRandom();
+  } catch (e) {
+    console.error('Failed to load essays:', e);
   }
 }
 
-function renderEssays(essays) {
-  const grid = document.getElementById('essays-grid');
-  if (!grid) return;
-  
-  // Clear dummy essays
-  grid.innerHTML = '';
-  
-  essays.forEach(essay => {
-    const card = document.createElement('div');
-    card.className = 'essay-card';
-    
-    const typeClass = essay.category ? essay.category.toLowerCase() : 'essay';
-    const typeLabel = essay.category ? essay.category.toUpperCase() : 'ESSAY';
-    
-    card.innerHTML = `
-      <span class="essay-type">${typeLabel}</span>
-      <h3>${essay.title}</h3>
-      <p class="essay-preview">${essay.excerpt || essay.content.substring(0, 150)}...</p>
-      <a href="essays/${essay.slug}.html" class="read-more" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+function renderList(essays) {
+  const list = document.getElementById('writings-list');
+  if (!list) return;
+
+  list.innerHTML = '';
+
+  essays.forEach((essay, i) => {
+    const row = document.createElement('a');
+    row.className = 'writing-row';
+    row.href = `essays/${essay.slug}.html`;
+
+    const typeLabel = (essay.category || 'essay').toUpperCase();
+    const excerpt = essay.excerpt || (essay.content || '').substring(0, 160);
+
+    row.innerHTML = `
+      <div class="writing-num">${String(i + 1).padStart(2, '0')}</div>
+      <div class="writing-body">
+        <span class="writing-type">${typeLabel}</span>
+        <span class="writing-title">${essay.title}</span>
+        <p class="writing-excerpt">${excerpt}…</p>
+      </div>
     `;
-    
-    grid.appendChild(card);
+
+    list.appendChild(row);
   });
 }
 
-// Dark Mode Toggle
-function initThemeToggle() {
-  const themeToggle = document.getElementById('theme-toggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  
-  // Check saved preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.body.classList.toggle('dark-mode', savedTheme === 'dark');
-    updateThemeButton(savedTheme === 'dark');
-  } else if (prefersDark.matches) {
-    document.body.classList.add('dark-mode');
-    updateThemeButton(true);
-  }
-  
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      const isDark = document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      updateThemeButton(isDark);
-    });
-  }
-}
-
-function updateThemeButton(isDark) {
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.textContent = isDark ? '☀️ Light' : '🌙 Dark';
-  }
-}
-
-// Search Functionality
+// ─── Search ───────────────────────────────────────────────────
 function initSearch() {
-  const searchBox = document.getElementById('search-box');
-  const essayCards = document.querySelectorAll('.essay-card');
-  
-  if (!searchBox) return;
-  
-  searchBox.addEventListener('input', function(e) {
-    const query = e.target.value.toLowerCase();
-    
-    essayCards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      const preview = card.querySelector('.essay-preview').textContent.toLowerCase();
-      const type = card.querySelector('.essay-type').textContent.toLowerCase();
-      
-      const matches = title.includes(query) || 
-                     preview.includes(query) || 
-                     type.includes(query);
-      
-      card.style.display = matches ? 'block' : 'none';
-    });
-    
-    // Show "no results" message if needed
-    const visibleCount = Array.from(essayCards).filter(c => c.style.display !== 'none').length;
-    updateNoResults(visibleCount === 0);
-  });
-}
+  const box = document.getElementById('search-box');
+  if (!box) return;
 
-function updateNoResults(show) {
-  let noResults = document.getElementById('no-results');
-  if (show && !noResults) {
-    noResults = document.createElement('div');
-    noResults.id = 'no-results';
-    noResults.textContent = 'No essays found matching your search.';
-    noResults.style.cssText = 'text-align: center; padding: 2rem; color: #999; font-style: italic;';
-    document.querySelector('.essays-grid').appendChild(noResults);
-  } else if (!show && noResults) {
-    noResults.remove();
-  }
-}
+  box.addEventListener('input', () => {
+    const q = box.value.toLowerCase().trim();
+    if (!q) { renderList(allEssays); return; }
 
-// Random Essay Generator
-function initRandomEssay() {
-  const randomBtn = document.getElementById('random-btn');
-  
-  if (randomBtn && allEssays.length > 0) {
-    randomBtn.addEventListener('click', function() {
-      const randomEssay = allEssays[Math.floor(Math.random() * allEssays.length)];
-      window.location.href = `essays/${randomEssay.slug}.html`;
-    });
-  }
-}
+    const filtered = allEssays.filter(e =>
+      (e.title || '').toLowerCase().includes(q) ||
+      (e.excerpt || '').toLowerCase().includes(q) ||
+      (e.content || '').toLowerCase().includes(q) ||
+      (e.category || '').toLowerCase().includes(q)
+    );
+    renderList(filtered);
 
-// Share Functions
-function shareTwitter(title, url) {
-  const text = encodeURIComponent(`"${title}" - ${url}`);
-  window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
-}
-
-function shareFacebook(url) {
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
-}
-
-function shareEmail(title, url) {
-  const subject = encodeURIComponent(`Check out: ${title}`);
-  const body = encodeURIComponent(`Read this essay:\n\n${url}`);
-  window.location.href = `mailto:?subject=${subject}&body=${body}`;
-}
-
-// Smooth scroll for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href !== '#') {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+    if (filtered.length === 0) {
+      document.getElementById('writings-list').innerHTML =
+        '<p style="padding: 2rem 0; color: var(--ink-faint); font-style: italic;">No writings found.</p>';
     }
   });
-});
+}
+
+// ─── Random ───────────────────────────────────────────────────
+function initRandom() {
+  const btn = document.getElementById('random-btn');
+  if (!btn || allEssays.length === 0) return;
+
+  btn.addEventListener('click', () => {
+    const pick = allEssays[Math.floor(Math.random() * allEssays.length)];
+    window.location.href = `essays/${pick.slug}.html`;
+  });
+}
+
+// ─── Dark Mode ────────────────────────────────────────────────
+function initTheme() {
+  const btn = document.getElementById('theme-btn');
+  if (!btn) return;
+
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    document.body.classList.add('dark');
+    btn.textContent = '☀ Light';
+  }
+
+  btn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    btn.textContent = isDark ? '☀ Light' : '☽ Dark';
+  });
+}

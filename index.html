@@ -3,126 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="George Gondron Writings — A lifetime of philosophical essays, poems, and reflections on consciousness, spirituality, and what it means to be human.">
   <title>George Gondron — Writings & Reflections</title>
+  <meta name="description" content="A lifetime of philosophical essays, poems, and reflections by George Gondron — on consciousness, spirituality, and what it means to be human.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <h1 class="site-title">George Gondron</h1>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#browse">Browse</a></li>
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="/" class="masthead-name">George Gondron</a>
+      <ul class="masthead-nav">
+        <li><a href="#writings">Writings</a></li>
         <li><a href="#about">About</a></li>
+        <li><button id="theme-btn">☽ Dark</button></li>
       </ul>
-      <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
-    </nav>
+    </div>
   </header>
 
   <main>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <h1>A Lifetime of Thought, Written Down</h1>
-      <p>Philosophical essays, poems, and meditations on consciousness, 
-         spirituality, and what it means to be human — by George Gondron</p>
-    </section>
+    <!-- Hero: photo + pull quote from George's own writing -->
+    <section class="hero">
+      <div class="hero-quote">
+        <blockquote>
+          "We seek without that which can only be found within — a Divine spark, closer to us than we are to ourselves."
+        </blockquote>
+        <cite>— George Gondron, <em>Yearning</em></cite>
 
-    <!-- Stats -->
-    <section class="stats">
-      <div class="stats-inner">
-        <div class="stat">
-          <div class="stat-number">698</div>
-          <div class="stat-label">Writings</div>
+        <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button id="random-btn" class="btn btn-filled">Read Something</button>
+          <a href="#writings" class="btn btn-ghost">Browse All</a>
         </div>
-        <div class="stat">
-          <div class="stat-number">630</div>
-          <div class="stat-label">Essays</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">50</div>
-          <div class="stat-label">Poems</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">18</div>
-          <div class="stat-label">Haikus</div>
-        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="george.jpg" alt="George Gondron">
+        <p class="hero-caption">George Gondron</p>
       </div>
     </section>
 
-    <!-- Welcome -->
-    <section class="featured">
-      <h2>Welcome</h2>
-      <p>
-        George Gondron has spent decades asking the questions most of us 
-        push aside. His work explores consciousness, morality, the nature of 
-        change, and the quiet dignities of an examined life.
-      </p>
-      <p>
-        This archive is a gift freely shared — a lifetime of thinking, 
-        written down for anyone who seeks deeper understanding.
-      </p>
-      <div class="featured-actions">
-        <button id="random-btn" class="btn btn-gold">📖 Read Something</button>
-        <a href="#browse" class="btn btn-outline">Browse All Writings</a>
-      </div>
-    </section>
+    <hr class="rule">
+    <div class="subtitle-bar">698 writings spanning decades of reflection · Essays · Poems · Haikus</div>
+    <hr class="rule">
 
-    <!-- Browse -->
-    <section class="browse-section" id="browse">
-      <h2>Browse Writings</h2>
-      <input 
-        type="text" 
-        id="search-box" 
-        class="search-box" 
-        placeholder="Search by title, theme, or keyword…"
-      >
-      <div class="essays-grid" id="essays-grid">
-        <!-- Populated by JavaScript from essays.json -->
+    <!-- Writings list -->
+    <section class="browse" id="writings">
+      <div class="browse-header">
+        <h2>All Writings</h2>
+        <input type="text" id="search-box" class="search-box" placeholder="Search…">
+      </div>
+      <div class="writings-list" id="writings-list">
+        <!-- Populated by JavaScript -->
       </div>
     </section>
 
     <!-- About -->
-    <section class="about-section" id="about">
+    <section class="about" id="about">
       <div class="about-inner">
+        <div class="about-photo">
+          <img src="george.jpg" alt="George Gondron">
+        </div>
         <div class="about-text">
           <h2>About George Gondron</h2>
           <p>
             George Gondron has spent decades exploring the philosophical and 
             spiritual dimensions of human experience. His writings reflect a 
-            lifetime of observation, introspection, and dialogue with the great 
-            thinkers of humanity.
+            lifetime of observation, introspection, and deep dialogue with 
+            the enduring questions of human existence.
           </p>
           <p>
-            Through essays, poems, and reflections, George examines timeless 
-            questions: What does it mean to be conscious? How do we grow? What 
-            responsibilities do we have to each other? How can we live 
-            authentically in a world of illusions?
+            Through essays, poems, and reflections, George examines the questions 
+            most of us push aside: What does it mean to be conscious? How do we 
+            grow beyond our self-imposed limitations? What responsibilities do we 
+            have to each other? How do we live authentically in a world of illusions?
           </p>
           <p>
-            This archive represents a gift freely shared — a lifetime of 
-            thinking, written down for anyone seeking deeper understanding 
-            of themselves and the world.
+            This archive is a gift freely shared — a lifetime of thinking, 
+            written down for anyone who seeks deeper understanding of themselves 
+            and the world around them.
           </p>
-        </div>
-        <div>
-          <img src="george.jpg" alt="George Gondron" class="about-photo">
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <p class="footer-title">George Gondron — Writings & Reflections</p>
-      <p>698 essays, poems, and haikus — Updated March 2026</p>
-      <p style="margin-top: 1rem;">
-        <a href="https://github.com/blankjw/George-writings" target="_blank">View on GitHub</a>
-      </p>
-    </div>
+  <footer class="footer">
+    <p class="footer-name">George Gondron — Writings & Reflections</p>
+    <p>698 essays, poems, and haikus</p>
+    <p style="margin-top: 1.2rem;">
+      <a href="https://github.com/blankjw/George-writings">View on GitHub</a>
+    </p>
   </footer>
 
   <script src="js/app.js"></script>
