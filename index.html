@@ -6,6 +6,31 @@
   <meta name="description" content="George Gondron Writings - Essays, poems, and philosophical reflections on life, spirituality, and human consciousness.">
   <title>George Gondron Writings Archive</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    
+    .about-photo {
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    body.dark-mode .about-photo {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    
+    @media (max-width: 600px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,7 +55,7 @@
     <!-- Statistics -->
     <section class="stats">
       <div class="stat">
-        <div class="stat-number">703</div>
+        <div class="stat-number">698</div>
         <div class="stat-label">Total Writings</div>
       </div>
       <div class="stat">
@@ -49,7 +74,7 @@
 
     <!-- Featured Essay -->
     <section class="featured">
-      <h2>Featured Essay</h2>
+      <h2>Welcome</h2>
       <p class="essay-preview">
         Explore a complete collection of philosophical writings spanning decades. 
         Each essay reflects on the human condition, spiritual growth, and the search for meaning in an ever-changing world.
@@ -73,9 +98,8 @@
       >
       
       <div class="essays-grid" id="essays-grid">
-        <!-- Essays will be loaded here by build.py -->
+        <!-- Essays will be loaded here -->
         
-        <!-- Sample Essay Card -->
         <div class="essay-card">
           <span class="essay-type">Essay</span>
           <h3>The Nature of Consciousness</h3>
@@ -114,20 +138,30 @@
           border-color: #404040;
         }
       </style>
+      
       <h2 style="margin-bottom: 1.5rem; color: #2c2c2c;">About George Gondron</h2>
-      <p style="margin-bottom: 1rem; color: #5a5a5a;">
-        George Gondron has spent decades exploring the philosophical and spiritual dimensions of human experience. 
-        His writings reflect a lifetime of observation, introspection, and dialogue with the great thinkers of humanity.
-      </p>
-      <p style="margin-bottom: 1rem; color: #5a5a5a;">
-        Through essays, poems, and reflections, George examines timeless questions: 
-        What does it mean to be conscious? How do we grow? What responsibilities do we have to each other? 
-        How can we live authentically in a world of illusions?
-      </p>
-      <p style="color: #5a5a5a;">
-        This archive represents a gift freely shared—a lifetime of thinking, written down for anyone seeking 
-        deeper understanding of themselves and the world.
-      </p>
+      
+      <div class="about-container">
+        <div>
+          <p style="margin-bottom: 1rem; color: #5a5a5a;">
+            George Gondron has spent decades exploring the philosophical and spiritual dimensions of human experience. 
+            His writings reflect a lifetime of observation, introspection, and dialogue with the great thinkers of humanity.
+          </p>
+          <p style="margin-bottom: 1rem; color: #5a5a5a;">
+            Through essays, poems, and reflections, George examines timeless questions: 
+            What does it mean to be conscious? How do we grow? What responsibilities do we have to each other? 
+            How can we live authentically in a world of illusions?
+          </p>
+          <p style="color: #5a5a5a;">
+            This archive represents a gift freely shared—a lifetime of thinking, written down for anyone seeking 
+            deeper understanding of themselves and the world.
+          </p>
+        </div>
+        
+        <div style="text-align: center;">
+          <img src="george.jpg" alt="George Gondron" class="about-photo">
+        </div>
+      </div>
       
       <style>
         body.dark-mode #about {
@@ -145,7 +179,7 @@
   <footer>
     <p>
       George Gondron Writings Archive | 
-      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://github.com/blankjw/George-writings" target="_blank">GitHub</a>
     </p>
     <p style="margin-top: 0.5rem; font-size: 0.85rem;">
       A collection of philosophical essays, poems, and reflections | 
