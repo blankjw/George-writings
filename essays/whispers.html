@@ -3,9 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WHISPERS - George Gondron">
-  <title>WHISPERS - George Gondron Writings</title>
+  <meta name="description" content="WHISPERS — Haiku by George Gondron">
+  <title>WHISPERS — George Gondron</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Haiku card — always dark atmospheric background */
+    .haiku-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 130px);
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .haiku-card {
+      max-width: 580px;
+      width: 100%;
+    }
+    .haiku-label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c49848;
+      margin-bottom: 2rem;
+    }
+    .haiku-gem {
+      color: #c49848;
+      font-size: 1.2rem;
+      opacity: 0.6;
+      margin-bottom: 1.8rem;
+      letter-spacing: 0.4em;
+    }
+    .haiku-text {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      line-height: 2.0;
+      color: #f0ebe3;
+      font-weight: 400;
+      font-style: italic;
+    }
+    .haiku-gem-bottom {
+      color: #c49848;
+      font-size: 1.2rem;
+      opacity: 0.6;
+      margin-top: 1.8rem;
+      letter-spacing: 0.4em;
+    }
+    .haiku-byline {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(196,152,72,0.25);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: rgba(240,235,227,0.5);
+    }
+    .haiku-back {
+      display: inline-block;
+      margin-top: 1.2rem;
+      color: rgba(240,235,227,0.55);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .haiku-back:hover { color: #c49848; }
+    .haiku-share {
+      background: rgba(15,52,96,0.6);
+      border-top: 1px solid rgba(196,152,72,0.2);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .haiku-share .share-btn {
+      background: rgba(196,152,72,0.15);
+      color: #c49848;
+      border-radius: 3px;
+      padding: 0.45em 1em;
+      font-size: 0.75rem;
+      margin: 0.3rem;
+    }
+    .haiku-share .share-btn:hover {
+      background: rgba(196,152,72,0.35);
+      color: #f0ebe3;
+    }
+    footer { background: #0d0f1a; }
+    footer p { color: rgba(240,235,227,0.4); }
+    @media(max-width:600px) {
+      .haiku-text { font-size: 1.5rem; line-height: 1.9; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,54 +107,32 @@
         <li><a href="../#browse">Browse</a></li>
         <li><a href="../#about">About</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
     </nav>
   </header>
 
-  <main>
-    <article class="essay-content">
-      <div class="essay-header">
-        <span class="essay-type">HAIKU</span>
-        <h1 class="essay-title">WHISPERS</h1>
-        <div class="essay-meta">
-          By George Gondron | Source: WHISPERS.docx
-        </div>
+  <div class="haiku-wrap">
+    <div class="haiku-card">
+      <div class="haiku-label">WHISPERS</div>
+      <div class="haiku-gem">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <div class="haiku-text">WHISPERS<br>Do you ever listen, do you hear them<br>The whispers that your mind ignores</div>
+      <div class="haiku-gem-bottom">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <div class="haiku-byline">
+        George Gondron
+        <br>
+        <a href="../" class="haiku-back">← Back to All Writings</a>
       </div>
-      
-      <div class="essay-text">
-        <p>WHISPERS
-Do you ever listen, do you hear them
-The whispers that your mind ignores</p>
+    </div>
+  </div>
 
-      </div>
-      
-      <div class="share-buttons">
-        <a href="javascript:shareTwitter('WHISPERS', window.location.href)" class="share-btn">
-          Share on Twitter
-        </a>
-        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">
-          Share on Facebook
-        </a>
-        <a href="javascript:shareEmail('WHISPERS', window.location.href)" class="share-btn">
-          Share via Email
-        </a>
-      </div>
-      
-      <div style="text-align: center; margin: 2rem 0;">
-        <a href="../" class="read-more">← Back to All Essays</a>
-      </div>
-    </article>
-  </main>
+  <div class="haiku-share">
+    <a href="javascript:shareTwitter('WHISPERS', window.location.href)" class="share-btn">Share on Twitter</a>
+    <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+    <a href="javascript:shareEmail('WHISPERS', window.location.href)" class="share-btn">Share via Email</a>
+  </div>
 
   <footer>
-    <p>
-      George Gondron Writings Archive | 
-      <a href="https://github.com" target="_blank">GitHub</a>
-    </p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-      A collection of philosophical essays, poems, and reflections | 
-      Updated March 2026
-    </p>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
   </footer>
 
   <script src="../js/app.js"></script>
