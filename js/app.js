@@ -4,9 +4,9 @@ let allEssays = [];
 let activeFilter = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();   // always first — avoids flash of wrong theme
   loadEssays();
   loadBlog();
-  initTheme();
   initSearch();
   initPills();
 });
@@ -20,7 +20,8 @@ async function loadEssays() {
     renderAccordion(allEssays);
     initRandom();
   } catch (e) {
-    document.getElementById('writings-accordion').innerHTML =
+    const el = document.getElementById('writings-accordion');
+    if (el) el.innerHTML =
       '<p style="padding:2rem;color:#999;">Could not load writings. Please refresh.</p>';
   }
 }
@@ -31,10 +32,11 @@ function updateCounts(essays) {
     const t = (e.type || 'essay').toLowerCase();
     if (counts[t] !== undefined) counts[t]++;
   });
-  document.getElementById('count-all').textContent   = counts.all;
-  document.getElementById('count-essay').textContent = counts.essay;
-  document.getElementById('count-poem').textContent  = counts.poem;
-  document.getElementById('count-haiku').textContent = counts.haiku;
+  const el = (id) => document.getElementById(id);
+  if (el('count-all'))   el('count-all').textContent   = counts.all;
+  if (el('count-essay')) el('count-essay').textContent = counts.essay;
+  if (el('count-poem'))  el('count-poem').textContent  = counts.poem;
+  if (el('count-haiku')) el('count-haiku').textContent = counts.haiku;
 }
 
 function getFiltered(query) {
@@ -101,7 +103,8 @@ function renderAccordion(essays) {
     toggle.addEventListener('click', () => {
       const isOpen = section.classList.toggle('open');
       // Close others if search is empty (full browsing mode)
-      if (isOpen && !document.getElementById('search-box').value) {
+      const searchBox = document.getElementById('search-box');
+      if (isOpen && searchBox && !searchBox.value) {
         document.querySelectorAll('.accordion-section.open').forEach(s => {
           if (s !== section) s.classList.remove('open');
         });
@@ -137,7 +140,8 @@ function initPills() {
       document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       activeFilter = pill.dataset.filter;
-      const q = document.getElementById('search-box').value.toLowerCase().trim();
+      const searchBox = document.getElementById('search-box');
+      const q = searchBox ? searchBox.value.toLowerCase().trim() : '';
       renderAccordion(getFiltered(q));
     });
   });
@@ -182,14 +186,22 @@ async function loadBlog() {
 
 // ─── Dark Mode ────────────────────────────────────────────────
 function initTheme() {
-  const btn = document.getElementById('theme-btn');
-  if (!btn) return;
+  // Works on both homepage (id="theme-btn") and essay pages (id="theme-toggle")
+  const btn = document.getElementById('theme-btn') || document.getElementById('theme-toggle');
+
+  // Apply saved theme immediately (before any button interaction)
   const saved = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (saved === 'dark' || (!saved && prefersDark)) {
+  const isDarkOnLoad = saved === 'dark' || (!saved && prefersDark);
+  if (isDarkOnLoad) {
     document.body.classList.add('dark');
-    btn.textContent = '☀ Light';
   }
+
+  if (!btn) return;
+
+  // Set button label to match current state
+  btn.textContent = isDarkOnLoad ? '☀ Light' : '☽ Dark';
+
   btn.addEventListener('click', () => {
     const isDark = document.body.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
