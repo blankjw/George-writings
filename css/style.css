@@ -570,3 +570,60 @@ a:hover { color: var(--gold-hover); }
   .writing-num { display: none; }
   .writing-row { grid-template-columns: 1fr; }
 }
+
+/* ── Hero override: text-only centered ── */
+.hero {
+  grid-template-columns: 1fr !important;
+  text-align: center;
+  max-width: 760px !important;
+  padding: 6rem 2rem 5rem !important;
+  gap: 0 !important;
+}
+.hero-eyebrow {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+.hero-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+.hero-cite {
+  font-family: var(--sans);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  color: var(--ink-faint);
+  font-style: normal;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* Writing rows are links — remove underline */
+a.writing-row {
+  text-decoration: none;
+}
