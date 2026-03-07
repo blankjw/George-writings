@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DISCONNECTED - George Gondron">
+  <title>DISCONNECTED - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">DISCONNECTED</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>DISCONNECTION
+On the highway called life, our personal journey
+We will encounter ‘speed bumps’ periodically
+Unexpected events that throw us off balance
+That disrupts our daily activities and agendas
+Most of which we can handle and deal with
+But there are those that have a significant impact
+On our psyches, our emotional intelligence
+Our self-image, and leave us with a feeling of disconnection
+As if we’re on an island all alone 
+Dealing with specific feelings which
+Almost always involve relationships
+Where do we fit in, how do we fit in, do we fit in?
+The pattern goes as follows
+The less the interaction with those we consider
+Significant others, family, friends, etc.
+The greater the tendency to take on an imagined belief
+That there may be something wrong with us, ourselves
+Especially when we are young
+Our need to be included, accepted, and engaged
+Is very important and necessary for our wellbeing
+Without those experiences at a young age
+Of being accepted, loved, included, and nurtured
+Especially in our family systems
+We are vulnerable to outside forces that are not
+In the end beneficial
+Forces that are willing to manipulate and condition us
+For their benefit, their purpose, their goals
+Convincing us that they have all the right answers
+And we need only listen to and follow them
+They seek the vulnerable, the needy, the easily conditioned
+The ‘snake oil salesmen’, the ‘false prophets’, the ‘naysayers’
+The ‘self-righteous’, and the ‘propagandist’, prey on the weak
+If you experience any of the above, know of someone that does
+I recommend a daily practice of a few minutes of silence,
+Stillness, with Presence, a meditative/contemplative practice
+If consistently committed to, you will find your own inner
+Strength, your own inner truth, your own inner healing</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('DISCONNECTED', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('DISCONNECTED', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="disconnect.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">DISCONNECT</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="disguises.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">DISGUISES</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

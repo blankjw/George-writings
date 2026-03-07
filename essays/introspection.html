@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="INTROSPECTION - George Gondron">
+  <title>INTROSPECTION - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">INTROSPECTION</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>INTROSPECTION
+The ability to look within
+The process that few in Western culture
+Take the time for or have the ability to do
+The serious examination of one’s own behavior
+Connected to critical thought
+The understanding that all change
+Begins with personal change
+Our ‘go to’ behavior is first and foremost
+Pointing fingers and blaming
+Nothing can be my fault
+So, it must be your fault
+Thinking which is normal to a young child
+Or even adolescents
+But no longer are adults the exception
+Now, all it seems, participate in the blame game
+Lack of introspection is directly correlated
+To an inability to have a personal relationship
+With one’s image of a creator Being
+Regardless of one’s belief system
+Rather, that relationship remains cognitive only
+And never reaches the heart
+It remains a belief about rules and regulations
+Rites and rituals, and dogma and doctrine
+Polarized thinking at its best
+Do good get rewarded, do bad get punished
+Sincere belief is not about good or bad
+It is about relationships, pure and simple
+That’s what life is, relationship
+That is its best definition
+Beginning with the honest relationship about myself
+And then with all else, not just other people
+Introspection demands that I examine my own behavior
+And how that impacts others
+We don’t live in a vacuum
+What we do or do not do matters
+We truly are a part of the problem, or of the solution
+For your sake, for all’s sake, be introspective</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('INTROSPECTION', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('INTROSPECTION', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="integrity.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">INTEGRITY</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="is-it-too-late.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">IS IT TOO LATE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

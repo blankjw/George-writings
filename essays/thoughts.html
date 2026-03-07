@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="THOUGHTS - George Gondron">
+  <title>THOUGHTS - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">THOUGHTS</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>THOUGHTS
+If useless thoughts were changed into gold
+We&#39;d all be wealthy, beyond our wildest dreams
+But they can&#39;t, and they won&#39;t, and we continue
+What is the purpose, the goal, the results?
+To distract, to avoid, to waste energy
+Our thoughts distract us just as our activities
+We avoid reality and a life of substance
+And we waste energy, energy, and more energy
+Becoming exhausted with no positive results
+And most of these thoughts are negative,
+ repetitive
+Wanting someone or something to change
+And they never do, or it never does
+Yet we cling to useless thoughts
+Seldom are our thoughts analytic
+Reflective, pensive, or contemplative
+Mostly accusatory, complaining, or critical
+Never about myself, always about the other
+Thought; &#39;if only they&#39;   -   Reality; &#39;if only I&#39;
+So, how do we stop our &#39;flypaper&#39; minds?
+These &#39;monkey&#39; minds that never cease
+Increase the neural groves beyond three or four
+There are ways, it&#39;s a matter of choice
+That&#39;s what life is , you know, choosing
+But, most only blame for what they have chosen
+We could see more each day instead of just looking
+And listen more each moment instead of just
+ hearing
+And then there&#39;s the big risk, silence and stillness
+A few minutes each day to empty the mind
+Let the thoughts go, shut out the noise
+The rewards will surprise you, they won&#39;t
+ disappoint
+It is your choice, it is your life, it is a way, it is</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('THOUGHTS', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('THOUGHTS', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="thiomas-merton-quote.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">THIOMAS MERTON QUOTE</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="timess-vaue.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">TIMES&#39;S VA;UE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

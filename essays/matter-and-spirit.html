@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MATTER AND SPIRIT - George Gondron">
+  <title>MATTER AND SPIRIT - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">MATTER AND SPIRIT</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>MATTER AND SPIRIT
+In the Western mind the idea that matter and spirit
+Or the material and spiritual are inseparable 
+Is not even a question to be entertained
+For they are considered two different realities
+If considered at all
+The ego, the mind, and the intellect perceive the material
+Easily, with no problem
+It’s what we experience through the five senses
+Taste, touch, smell, hear, and see
+The spiritual on the other hand suffers the belief
+That region and spirituality are the same
+But they’re not, religion can be taught
+Spirituality can only be experienced
+Experienced through the material 
+Consciously through the individual human being
+And probably through everything that exists
+Maybe that’s the true meaning of incarnation 
+Matter and spirit united, the essence of all life
+A good analogy or comparison would be
+If we stopped breathing the heart would eventually
+Stop beating
+In like manner, if our heart stopped beating
+We’d eventually stop breathing
+Heart being the material, breath the spiritual
+Both are required for human life
+Our ability to understand or comprehend
+Is always linked to a context
+We don’t exist in a vacuum, every emotion is contextual
+A spiritual experience happens in the context of 
+Being without thoughts and distractions
+Moments of being unguarded, undefended, in the present
+A meditative/contemplative practice is a path to 
+Spiritual experience – silence, stillness, with Presence
+An emptying of the mind of its incessant repetitive thoughts
+Dwelling on the past or the future, missing the now
+Listen to the whispers of your heart, soul, and spirit
+Discover your Truth, It patiently waits</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('MATTER AND SPIRIT', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('MATTER AND SPIRIT', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="many-meanings.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">MANY MEANINGS</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="maybe.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">MAYBE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

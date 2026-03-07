@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TEACHABLE - George Gondron">
+  <title>TEACHABLE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">TEACHABLE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>TEACHABLE
+The success of learning is based on the ability to be taught
+The ability to be taught is based on an open mind
+For a closed mind is unteachable
+Of course, admittedly we can learn in many ways
+Beginning with our five senses, taste, touch, smell, hear, and see
+But further education of the mind, of the intellect
+Demands an openness, a willingness to learn
+To become more and better informed
+To expand one’s awareness and consciousness
+To not be so easily fooled by false information
+So readily acceptable by our infantile emotions
+Held even as adults, or better stated, regrettably as adults 
+Notice how emotional people become over obviously
+False information, alternative facts, half-truths
+And out-right lies and unfounded narratives
+All the aforementioned are driven by a fear-based mentality
+Not a mentality of openness, kindness, compassion, and love
+We it seems are more prone to be ‘anti’ than ‘pro’
+More prone to reacting than responding
+We cling to our ‘familiars’ in our thoughts, feelings, and actions
+Unable it seems to ‘let-go’ of whatever it is that keeps us closed
+We prefer the easy path, the known path, the common path
+Even when those paths lead to or keep us dysfunctional
+Keep us separated and segregated, disconnected
+Our ability to learn is a matter of choosing
+As well as our ability to defend and remain stuck, both choices
+A path few take in our modern-day culture
+Is a daily few minutes of silence, with stillness, and with Presence
+A time to empty our ever-busy ‘monkey minds’
+Of their incessant and repetitive thoughts that go nowhere
+To stop and listen to the quiet whispers
+Of our own hearts, souls, and spirits
+To be open to teachable moments that we so desperately need
+To become more fully human, more whole not a half
+To become our ‘true selves’ as opposed to a ‘false self’
+A disconnected self, a façade and persona unrecognizable
+Even as we gaze in the mirror at our reflection – please</p>
+      <p>George G</p>
+      <p>.</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('TEACHABLE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('TEACHABLE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="subject-to-change.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">SUBJECT TO CHANGE</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="tell-me.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">TELL ME</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

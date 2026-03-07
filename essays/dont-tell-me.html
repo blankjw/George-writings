@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DON&#39;T TELL ME - George Gondron">
+  <title>DON&#39;T TELL ME - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">DON&#39;T TELL ME</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>DON&#39;T TELL ME - SHOW ME
+When will we learn that words are empty?
+Words, more often than not, forms of manipulation
+Rarely, reasons for change
+Forms used to convince, persuade, and attempt to prove
+Words cannot demonstrate, they can only insinuate
+When words are worshipped, the message gets lost
+When words are believed wars are created
+Lives are lost, innocents die, no one wins
+Words are just labels and labels are not truth
+At best just descriptions, not transformation 
+How many times have the words proved false?
+From the politicians, the vendors, the marketer of lies
+In the end, we believe what we want to believe
+Nothing more, nothing less
+If it keeps us secure, with little discomfort, little distraction
+Whether it&#39;s fact or fiction, we will believe
+And the words which we hear
+Whether half-truths or lies
+If heard often enough become our beliefs
+So, how do we know what is true or false?
+How can we tell what to trust and believe?
+The truth can be known in the behavior that we see
+The truth can be known in the results of the actions
+The truth can be known in our personal experience
+It is not what we hear in the too many words
+It is what we observe and the results there from
+There we find truth more trusting than the words
+It is personal experience that matters the most
+For personal experience cannot lie
+Critical thought, reflection, and contemplation
+These bring awareness more than just words
+We trust what we know, we know what we experience
+Nothing can be fully believed, trusted, or known
+Without putting into practice what we have learned
+Without experience, and not just words
+Have faith in your knowing, don&#39;t doubt your own truth
+Even if you stand alone</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('DON&#39;T TELL ME', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('DON&#39;T TELL ME', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="dont-run.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">DON&#39;T RUN</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="dont-wait.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">DON&#39;T WAIT</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

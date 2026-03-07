@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BANKRUPT - George Gondron">
+  <title>BANKRUPT - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">BANKRUPT</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>BANKRUPT
+Lacking in some quality, destitute  -  bankrupt
+Most consider bankruptcy in financial terms
+But there are many ways to become bankrupt
+As a nation
+And as espoused by many, a Christian nation
+How are we bankrupt?
+At least according to &#39;Christian&#39; values and precepts
+I can think of two; morally and spiritually
+There&#39;s no need for anyone that&#39;s not a Christian
+To assess or infer how a Christian follows
+Or does not follow their own beliefs
+Their actions reveal how they follow what they believe
+And their words are their own judge and jury
+As they express their sympathy, their sorrow for others
+Sympathy doesn&#39;t put food on the table of a hungry child
+Sympathy doesn&#39;t provide a living wage
+Sympathy doesn&#39;t provide health care
+Sympathy doesn&#39;t provide for higher or fair education
+Sympathy doesn&#39;t provide equal pay for equal work
+In fact, as the saying goes, one finds sympathy
+Between &#39;shit and syphilis&#39; in the dictionary
+Gandhi once said, &#39;I love your Christ, but your Christians
+Are nothing like your Christ&#39;
+And then there&#39;s morality
+The posture of &#39;righteous indignation, finger-pointing
+By those who hold hidden secrets themselves
+Refusing to see their own &#39;shadow&#39;
+The rhetoric &#39;We the people&#39; is a lie
+The proclamation of &#39;family values&#39; is a lie
+The narrative of &#39;justice for all&#39; is a lie
+Unless of course, you&#39;re one of the fortunate few
+Poverty is a creation, it&#39;s not a given
+It happens for one reason only, selfishness
+Yes, bankruptcy is much greater than just financial
+It is the compromise of integrity, ethics, and truth as well
+And not until we recognize our own participation
+Our own bankruptcy, will there be significant change</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('BANKRUPT', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('BANKRUPT', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="avoidance.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">AVOIDANCE</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="becoming.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">BECOMING</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

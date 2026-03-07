@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OUR TOO MANY WORDS - George Gondron">
+  <title>OUR TOO MANY WORDS - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">OUR TOO MANY WORDS</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>OUR TOO MANY WORDS
+Twenty six Latin symbols
+The origin of our current alphabet
+Used to formulate words, eliciting images in the mind 
+That call forth emotions of action, and of passivity
+Jumbles of letters creating a morass of distortion
+Most of which are half truths, and many are lies
+And the most proficient at the use of these words
+The ministers of propaganda, advertising, and marketing
+The &#39;silver tongued devils&#39;, power brokers, and politicians
+The &#39;bull-shiters&#39; and &#39;fear mongering&#39; self deceptive orators
+Selling &#39;ice to the Eskimo&#39;, and &#39;glasses to a blind man&#39;
+And we all, are the consumers of these &#39;half-baked&#39; truths
+How are we so easily manipulated, fooled
+By these too many words?
+We trust what is untrustworthy, only the words
+And don&#39;t trust the obvious, what can be seen
+We are conditioned to be inspired by words alone
+Especially words that arouse the emotions
+We trust social media, in all its forms
+To bring us the truth, but they, like us
+Believe the misrepresentations and support the farce
+Biased and opinionated with little objectivity
+The voice of the &#39;truth-sayer&#39; is only a whisper
+Unheard over the din of the familiar but uncomfortable
+And the common response to the feared question of
+&#39;How do you know what you pass on is true?&#39;
+&#39;Well it must be true, because so-and-so said it was&#39;
+What saves us from this &#39;morass&#39; of too many words?
+What is our lifeline through this fog and confusion?
+It is our experience, nothing more, nothing less
+Experience gained through our own critical thinking
+Our willingness to search where the truth lies, not just the words
+To not seek a solution, is to be part of the problem
+Blame doesn&#39;t excuse our gullibility, our &#39;easy&#39; beliefs
+If we don&#39;t make the effort to perceive with clarity
+How can we ever respond with accuracy?
+Don&#39;t be fooled by the too many words, trust the behavior</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('OUR TOO MANY WORDS', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('OUR TOO MANY WORDS', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="our-story.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">OUR STORY</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="our-weakness-unable-to-let-go.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">OUR WEAKNESS, UNABLE TO LET GO</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

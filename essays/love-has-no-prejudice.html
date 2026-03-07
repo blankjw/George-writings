@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOVE HAS NO PREJUDICE - George Gondron">
+  <title>LOVE HAS NO PREJUDICE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">LOVE HAS NO PREJUDICE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>LOVE HAS NO PREJUDICE
+Where there is prejudice, bias, discrimination, or injustice
+There is no love
+Yet it is only the power of love that can alter 
+A judgmental mind 
+Can defeat and overcome fear
+The underlying emotion of all that is negative
+The antidote to fear can only be unconditional love
+It is what the spiritual masters and teachers throughout history
+Have taught, have written about, have demonstrated
+The mind alone takes a path of power and control
+For the success of its ultimate goals, not a path of love
+In a nation ruled, by extreme capitalism
+Love languishes, and the ego rules supreme
+The existing mantra is more is better, bigger is better.
+And faster is better, the result of things being more important
+Than people, more important than meaningful relationships
+More important than peace within, peace between, peace among
+We have become emotionally bankrupt
+And intellectually ignorant
+There is a vast difference between intellect and intelligence
+We are now ranked twenty-fifth in IQ quotient 
+Among all modern nations
+The advent of the social media explosion 
+Has not brought us closer together
+It has driven us further apart
+Our level of individual comprehension and understanding
+Has diminished as we open our minds to what attracts
+What stimulates our emotions and bolsters our egos
+Bright and shiny on the outside, dead on the inside
+The negative aspects of the mind are strengthened
+When there is no internal reference or core
+When the connection to heart, soul, and spirit is lost
+Spend a few minutes each day in quiet reflection
+Silence, stillness, with Presence awakens our inner core
+Empty the mind that you might hear the whispers of
+Your own heart, soul, and spirit, be connected
+Love has no prejudice, only Love has the power to change</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('LOVE HAS NO PREJUDICE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('LOVE HAS NO PREJUDICE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="love-deserved-1.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">LOVE DESERVED (1)</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="love-versus-trust.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">LOVE VERSUS TRUST</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

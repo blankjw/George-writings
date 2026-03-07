@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I WAS WRONG - George Gondron">
+  <title>I WAS WRONG - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">I WAS WRONG</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>I WAS WRONG
+Probably the three most important words
+A single human being can utter
+When they honestly recognize an error
+In their thinking, feeling, and or action
+Is to simply say, ‘I was wrong’
+But it seems that in our current environment
+It is more the exception than the rule
+If you have a person or persons in your life that can
+Utter those words when necessary
+Hold on to them, cherish them, they are gems
+And more often than not, they can be trusted
+The importance of being able to say those words
+Is first for self-honesty
+For the ability to acknowledge we’re not always right
+To look in the mirror and say to ourselves
+We can do better; right is not always might
+It is not a weakness to admit when one is wrong
+It is a strength
+The inability to say, ‘I was wrong’ is a weakness
+First a lie to ourselves, and then to others
+Unable to say, ‘I was wrong’, when appropriate
+Is probably one of the greatest reasons
+Relationships eventually dissolve
+It’s like there’s an elephant in the room
+But no one wants to talk about it
+We build walls instead of bridges
+Becoming closed rather than open
+When there’s a fight between right and wrong
+No one wins, both lose
+It is the heart that can say ‘I’m sorry, I was wrong’
+But the ego clings to ‘rightness’
+It’s ‘I may not be right, but I’m never wrong’
+Everything changes, nothing lasts forever
+It may be necessary to let go
+Spend a few minutes each day in silence, stillness
+With Presence, reflect on your own ability to say
+I was wrong, I can do better, I will do better</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('I WAS WRONG', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('I WAS WRONG', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="i-and-me.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">I AND ME</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="i-wish.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">I WISH</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

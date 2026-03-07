@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MY PRAYER - George Gondron">
+  <title>MY PRAYER - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">MY PRAYER</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>MY PRAYER
+How do I pray to you my Lord?
+The words seem so useless and unimportant
+Empty and hollow with no substance
+The mind has no words, no thoughts, nothing of value
+That can possibly express what lies within my heart, my soul
+No need to ask for anything
+You already know what I need
+In Your greatness
+There is no need for my gratitude
+You don&#39;t seek sacrifice or worship
+In quiet moments I have hints of what prayer truly is
+It is relationship, it is being with
+It is the soft beating of my heart, the warmth of my breath
+In the silence, in the stillness, in the solitude
+In Your Presence, in contemplation
+We pray, &#39;Thy will be done&#39;
+What is Your will oh Lord?
+I know the answer, I feel the meaning, I sense the reason
+It is the well-being of Your creation
+It is relationship to and with all that is
+The well-being of all that You provide as gift
+Given through Your grace, Your love
+So, my prayer also must be action
+Action that springs from my contemplation
+Action, given in the form of love for all
+For all that You have created and are creating still
+You create life, out of love, for relationship
+How could it be otherwise?
+Your Son taught us these things, with His life
+He showed us how to live, how to relate, how to love
+We are slow to learn, we prefer rules instead
+We are slow to follow, reluctant to practice
+But, You trust us still, You have faith in Your creation
+You give us Your Spirit, bound to Your Love
+We will learn, we will relate, we will love
+I know we will, we must
+I promise, we will, we can</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('MY PRAYER', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('MY PRAYER', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="my-path-is-a-choice.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">MY PATH IS A CHOICE</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="my-shadow-and-i.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">MY SHADOW AND I</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

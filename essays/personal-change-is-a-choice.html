@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PERSONAL CHANGE IS A CHOICE - George Gondron">
+  <title>PERSONAL CHANGE IS A CHOICE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">PERSONAL CHANGE IS A CHOICE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>PERSONAL CHANGE IS A CHOICE
+The changes we may or may not make in our lives are about choice
+There are a few significant reasons the human ego refuses to change
+Among them are familiarity, resistance to change, closed minds, and
+ the refusal to learn which is defined as ignorance
+We waste untold amounts of energy attempting to change others
+ while self-criticism never sems to be the better choice
+Carl Jung, the renown Swiss psychiatrist, psychotherapist, and 
+ analytical psychologist once said, ‘thinking is difficult, that’s why
+ most people judge’
+We live in a culture where sadly, 54% of adults have a literacy level of
+ sixth grade or lower, 20% of adults cannot read or write
+Those two facts answer a lot of questions about the level of
+ awareness, understanding, and comprehension of our citizenry
+Only clarity of perception, how we see and hear, leads to any
+ accuracy of response
+As mentioned above, familiarity can and does become our enemy
+There is a saying, ‘people prefer the familiar to the strange even if
+  the familiar is painful’
+Juxtaposed to the saying, ‘no pain, no gain’
+The bottom line of life is that each of us are responsible for our own 
+  mental wellbeing
+Peace within leads to peace between and peace among
+Peace happens no other way, we are the judge, jury and executioner
+ of our own lives, we build our prison, and we alone hold the key
+Another interesting observation, when you change others will change 
+ also, and it will be the necessary change
+Change is never easy, old patterns are difficult to break
+But all positive progress begins with change, it leads to wholeness
+I wish you ‘good trouble’, the strength and willingness to change
+We all have the option to choose, stay stuck or move forward
+To aid in the process, adopt a meditative/contemplative practice
+Spend a few minutes each day in silence, stillness, with Presence
+A practice the ego will resist, even more reason to do it
+Focus on your breath or a short mantra, breathe in, breathe out
+The mind will wander, simple rinse and repeat, over and over
+Listen for the whispers of your inner guides, heart, soul, and spirit
+They hold your true self, have your answers, they wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('PERSONAL CHANGE IS A CHOICE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('PERSONAL CHANGE IS A CHOICE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="perpetual-fear.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">PERPETUAL FEAR</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="personal-values.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">PERSONAL VALUES</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

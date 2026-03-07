@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IF FACTS ARE NOT ENOUGH - George Gondron">
+  <title>IF FACTS ARE NOT ENOUGH - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">IF FACTS ARE NOT ENOUGH</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>IF FACTS ARE NOT ENOUGH
+We appear to be at a treacherous crossroads
+A time like no other in our history
+Where facts really do not matter
+Two and two are four, but for too many
+The answer is five
+The need to be ‘right’ far exceeds
+The truth
+A clear and obvious truth
+When the state of consciousness 
+The level of awareness is so dysfunctional
+In two significant aspects of our lives
+Namely politics and religion
+Made so very obvious as a result of dualism
+Life on all levels is encircled by a right/wrong,
+Black/white, good/bad, me against you, and
+Us against them attitude
+Then there is no hope for cooperation, conciliation,
+Or compromise
+An immature reality of, ‘my way or the highway’ 
+Politics has become totally about power and money
+About control and manipulation
+Religion is nothing more than warming a church pew
+And putting money in a plate
+Also about power and control
+It’s not just Christian religion, the control is in all religions
+It has all become about worship, not action
+All about rites, rituals, dogma, and doctrine
+Not about spirituality, not about a serious prayer life
+Not a connection between the heart, soul, and spirit
+All cognitive, intellectual, and egoic
+Not about a relationship with a creator God whatsoever
+With the Isness of the universe
+We take our democracy, our Constitution for granted
+Those in Germany during the 1930s did as well
+That didn’t end well, Germany was a democracy
+Until Hitler gained control, it can happen here as well
+Be still, be silent, with Presence – connect with your heart</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('IF FACTS ARE NOT ENOUGH', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('IF FACTS ARE NOT ENOUGH', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="i-wish.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">I WISH</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="if-only.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">IF ONLY</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

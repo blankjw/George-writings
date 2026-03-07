@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TO BELIEVE IS NOT TO KNOW - George Gondron">
+  <title>TO BELIEVE IS NOT TO KNOW - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">TO BELIEVE IS NOT TO KNOW</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>TO BELIEVE IS NOT TO KNOW
+We, humans, will literally destroy relationships
+For what we believe yet do not know
+We know in one way only
+Through personal experience
+Experience discovered through our five senses
+Thoughts and feelings are a way of knowing after the fact
+After a direct experience
+I only know a person is racist, a bigot, a misogynist, 
+Selfish, a liar, an abuser, a thief, a hypocrite, etc., etc., etc.
+As a result of personal experience
+From what I witnessed, not third-party information
+Most of what we say we know, especially about others
+Is not through personal experience, not even close
+It is through the judgment, opinions, half-truths, and lies
+Of others, regardless of the reasons
+The common parlance is called ‘gossip’
+The primary function of which is to feel good about myself
+But the result is always damaging, always
+If we need to feel good about ourselves by putting others down
+The problem lies within us, not the other/others
+Projection is a psychological defense mechanism
+Used to criticize others for what we fail to see in ourselves
+And is used quite regularly
+We all have within us the best and the worst of human behavior
+‘There but for the grace of God, go I’
+Our weaknesses are nothing more than our lack of awareness
+Our ignorance, to put it bluntly
+Blame and denial are so much easier than self-actualization
+In our current societal development, we lack the evidence
+Of an inner core an internal reference
+We live in the mind, the ego, the intellect
+And unfortunately, intellect and intelligence are not the same
+We lack balance – inner and outer
+Spend a few minutes each day in a meditative/contemplative practice
+Empty the mind – be present to silence, stillness, and Presence
+Presence being your image of a creative Source, God if you may
+Listen to the whispers of your heart, soul, and spirit, they wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('TO BELIEVE IS NOT TO KNOW', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('TO BELIEVE IS NOT TO KNOW', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="to-be-great.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">TO BE GREAT</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="to-believe.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">TO BELIEVE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

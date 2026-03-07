@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FIDELITY - George Gondron">
+  <title>FIDELITY - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">FIDELITY</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>FIDELITY
+Fidelity – to be loyal or faithful to one’s core beliefs
+Only one definition of fidelity, there are many others
+The real issue is one’s core beliefs
+What are they, can I identify them, what is their origin
+Are they the result of personal experience
+Or are they beliefs that have been imposed upon me
+To accept anything without question or doubt
+Is to play and be the fool
+But that’s the culture we live in
+Marketers, propagandists, advertisers, and social media itself
+Are experts in their abilities to influence and manipulate
+They know that the way to influence people the most
+Is to play upon their desires and attachments
+Not their intellect, but their emotions, their feelings
+The process related to the addictive choices of human beings
+Is not intellectual, it’s psychological
+Of the emotions, not of the mind, both pleasure and pain
+There is no rationality at all to two questions such as
+What is it specifically you don’t like about that person?
+Answer, ‘I just don’t like them’
+Or, how do you know that?
+Answer, ‘I just know’
+Very difficult to have a meaningful informative conversation
+With that mentality, the epitome of a closed mind
+A mind that refuses to acknowledge facts and circumstances
+The beginning of an awareness of our personal core beliefs
+Is self-examination, self-reflection, self-doubt
+The question, ‘how is it I know what I say I know?’
+Or do I merely assume because it satisfies me emotionally?
+Maybe we don’t want to know, for if we did
+We might have to change or admit we were wrong
+One of the benefits of a meditative/contemplative practice
+Is self-revelation or self-understanding
+Through a few minutes of silence, and stillness, with Presence
+We begin to peel back the onion of ourselves 
+And discover our true essence as we listen to the whispers
+Of our heart, soul, and spirit – they hold our truth, our healing</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('FIDELITY', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('FIDELITY', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="fetish.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">FETISH`</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="five-questions.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">FIVE QUESTIONS</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

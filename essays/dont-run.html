@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DON&#39;T RUN - George Gondron">
+  <title>DON&#39;T RUN - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">DON&#39;T RUN</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>DON’T RUN
+There are some experiences that call for running
+Running away for our own safety
+But there are many, many more that necessitates
+That we remain firm and steadfast for our own
+Psychological wellbeing, our own mental health
+However, far too many hold on to their emotional pain
+Through denial, rationalization, justification, or any other
+Of the many psychological defense mechanisms
+Which are in themselves subjugation and suppression
+Mechanisms
+If those don’t work, we may choose medication
+A pill for anxiety, depression, or some other medical diagnosis
+That only masks the real problem and becomes
+Just a crutch, or worse we turn to some other chemical addiction
+That we ingest as alcohol, ‘street drugs’, or food
+Or we act out through indiscriminate sexual behavior
+Regardless our choice, in the end, none of the above work
+They actually do more harm, physically, emotionally, and spirituality
+If we have the strength and courage to examine the real problem
+If we are brave enough to face the real issue
+It is us, we are the ones responsible for our behavior
+No one else, ever
+The reasons we use to justify our behavior have no merit
+For in the end, those reasons don’t matter
+What matters is our health and wellbeing
+A personal problem is never solved through replacement
+It is only solved through sincere self-discovery
+Perhaps through the help of a trusted professional
+But more importantly through a change in lifestyle
+Looking at the false self in the face, in the mirror
+And committing to discover the ‘true self’, inside waiting
+We are spiritual beings living in a non-spiritual environment
+We can through a meditative/contemplative practice
+Discover our own spiritual nature, our true essence
+Spend a few minutes each day in silence, in stillness,
+Empty the mind and listen to the whispers of your inner self
+Listen to the inner Source that sustains each one of us, always</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('DON&#39;T RUN', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('DON&#39;T RUN', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="dont-look-back.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">DON&#39;T LOOK BACK</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="dont-tell-me.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">DON&#39;T TELL ME</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

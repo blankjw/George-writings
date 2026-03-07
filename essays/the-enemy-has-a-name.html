@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="THE ENEMY HAS A NAME - George Gondron">
+  <title>THE ENEMY HAS A NAME - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">THE ENEMY HAS A NAME</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>THE ENEMY HAS A NAME
+In a nation filled with opportunities to discover the truth
+The name of the enemy is ignorance
+The refusal to use our own brain, our own intellect
+Our own curious mind to separate fact from fiction
+To desire to know the truth as opposed to the alternative facts
+To be able to filter through the misinformation on social media
+That focuses on the manipulation of our choices to their benefit
+Of course, the captain of this ship of ignorance is our ego
+An ego that expects the path to the truth to be a superhighway
+Paved with no detours and no rough patches in the road
+An easy journey straight to reality 
+If the discovery of the truth were that simple
+There would be no need for marketing, advertising, conditioning,
+Programming, manipulation, and propaganda
+There would be no need for expanded learning at all
+And ironically, that’s what the uninformed mind prefers
+Let’s take the highway and avoid the less traveled roads
+Let’s drink the Kool-Aid and listen to the snake oil salesman
+It’s so much easier and more convenient than exerted effort
+Social media has a way of attracting our ‘laziness’
+Why go through the struggle of learning when we
+Already have all the answers, right at our fingertips
+Just ‘click’ on your favorite channel, problem solved
+Answer provided, simple and easy, no muss no fuss
+It is shocking how many people live through the narrative of
+‘So and so’ said, and ‘so and so’ loves it
+It’s called ‘you gonna believe me or those lyin eyes and ears’?
+There is a saying, ‘wake up and smell the roses’
+The same is true about expanded awareness and consciousness
+Put forth the effort to learn, reject the paved highway
+The benefit of anxiety and tension is that it gives us the
+Opportunity to grow, to become more than we are
+The purpose of a meditative/contemplative practice is to
+Awaken the gifts we have internally, already present
+Spend a few minutes each day in silence, stillness, with Presence
+Listen to the whispers of your own heart, soul, and spirit
+They hold your truth, they patiently wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('THE ENEMY HAS A NAME', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('THE ENEMY HAS A NAME', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="the-emptiness-of-words.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">THE EMPTINESS OF WORDS</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="the-fabric-of-life.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">THE FABRIC OF LIFE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

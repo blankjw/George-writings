@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="THE TWIKIGHT ZONE - George Gondron">
+  <title>THE TWIKIGHT ZONE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">THE TWIKIGHT ZONE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>THE TWILIGHT ZONE
+Back in the 50’s and 60’s Rod Serling hosted a weekly TV show,
+ The Twilight Zone
+Where the unimaginable, unbelievable, unthinkable, and the 
+ impossible was portrayed on our TV screens
+It has now been brought back to life in ‘living color’ by our new
+ TV personality, the Orange Trumpster with his cohort Elon ‘Hitler’
+ Musk, but now it has become very believable
+Every moment of every day brings news that is almost impossible
+ to comprehend and difficult to accept
+News which violates the Constitution and ignores the rule of law
+All perpetrated by the person who is supposed to defend our 
+ Constitution and democracy and uphold the law, but is nothing more 
+ than a habitual liar, fraudster, and con artist
+The more shocking reality is how many millions of people deny the
+ obvious which is exactly what the Germans did in the 1930’s
+And history is very clear about how that ended
+Even more disturbing is the fact that those who can and should 
+ oppose him, do not have the courage nor the spine to do so
+Fear is a great motivator, but the results of giving in to fear are
+ never beneficial and those who suffer the most are the marginalized,
+ the disenfranchised, the poor, the disabled, the minorities, those
+ living below the poverty level, the voiceless
+The enemy is not undocumented immigrants, those on welfare, the
+ single moms with children working several jobs to get by
+The enemy is extreme wealth, power, control, male ‘whiteness’,
+ the far right ‘evangelical Christians’ who speak for God
+Yes, the ‘Twilight Zone’ is alive and well and one must wonder when
+ will enough be enough? 
+We are losing our freedoms moment by moment, there is no equal
+ justice under the now ‘Trump Law’, no equality
+We are a nation divided by a narcissistic, egotistical, pathological, liar 
+Psychologically a sociopath/psychopath, without a conscience 
+Please adopt a meditative/contemplative practice, be a critical
+ thinker – sit in silence, stillness, with Presence each day
+Awaken your true self, the answers are inside you
+Focus on your breath or a brief mantra, breathe in, breathe out
+Listen to the whispers of your heart, soul, and spirit, they wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('THE TWIKIGHT ZONE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('THE TWIKIGHT ZONE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="the-survival-of-truth.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">THE SURVIVAL OF TRUTH</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="there-are-no-shortcuts.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">THERE ARE NO SHORTCUTS</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

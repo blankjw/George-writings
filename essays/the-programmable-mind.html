@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="THE PROGRAMMABLE MIND - George Gondron">
+  <title>THE PROGRAMMABLE MIND - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">THE PROGRAMMABLE MIND</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>THE PROGRAMMABLE MIND
+The overwhelming availability of social media
+In its many forms, is a blessing and a curse
+For those who understand how the mind operates
+Especially in our Western culture
+Our minds gravitate primarily toward
+Fear on the one hand, or love on the other
+Through a negative outlook toward life
+The conspiratorial mind
+Or a positive attitude, the possibility mind
+One of the great weaknesses in our culture
+Is our refusal to learn beyond our formal education
+It is so much easier to be ‘fed’
+Through all forms of social media
+Than it is to think, to doubt, to question, to research
+To be critical in our analysis of any and every subject
+We follow the narrative, the person, the group
+That stimulates and stirs our emotions
+For example, look at politics
+Liberals are more concerned about giving
+Conservatives are more concerned about maintaining
+One more concerned about progressing
+The other more concerned about the status quo
+It’s easy to control the individual, the group, the crowd
+When you understand what stirs their emotions
+What attracts them and holds their attention
+Fear is opposed to compromise, conciliation,
+Cooperation, conceding, and concession
+In other words, fear operates from a closed mind
+Love welcomes all the above with an open mind
+Fear is exclusive, love is inclusive
+Religion is no exception to the above narrative
+For a religion that espouses love on its terms
+Is nothing more than disguised fear
+To insist that you must think, feel, and act 
+In a particular manner, is fear-based
+Empty of love, regardless of the arena
+Be a critical thinker, use love, reject fear</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('THE PROGRAMMABLE MIND', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('THE PROGRAMMABLE MIND', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="the-process-of-understanding-2.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">THE PROCESS OF UNDERSTANDING 2</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="the-progress-of-influence.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">THE PROGRESS OF INFLUENCE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

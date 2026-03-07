@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TIMES&#39;S VA;UE - George Gondron">
+  <title>TIMES&#39;S VA;UE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">TIMES&#39;S VA;UE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>TIME’S VALUE
+In one moment, we are born
+In one moment, we die
+It’s the millions of moments in-between
+That creates our life
+The journey will demand many choices, many decisions
+Many forks in the road and different paths along the way
+The first organ to form in our body, our heart
+There are no instructions telling it how to beat
+It’s not gender-specific, contained within every person
+In its formation, there is already an innate knowing
+And to this day science has no idea how all this happens
+They can follow the mechanics of organ formation
+But they lack an understanding of how life begins
+We seldom, if ever, look to the heart for guidance
+But science does now know
+The same type of cells in the brain
+Are also found in the heart
+We will never know how time is lost
+As a result of ignoring the wisdom of the heart
+Great spiritual teachers, poets, and authors
+Have taught and written about 
+The knowing of the heart for centuries
+But we much prefer listening to our minds
+Our intellect, our egos before our hearts
+We waste time, run out of time, lose time,
+Time flies, not enough time, want to turn back time
+The best manager of time is the most resisted
+The consistent and dedicated practice
+Of a meditative/contemplative daily exercise
+Just a few minutes each day of silence, stillness
+With Presence, our best time investment
+A time to empty our minds of their incessant
+And often repetitive thoughts
+Which go nowhere and accomplish nothing
+We can then hear the whispers of our hearts
+An internal guide that patiently waits
+Take the time to listen, it never fails</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('TIMES&#39;S VA;UE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('TIMES&#39;S VA;UE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="thoughts.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">THOUGHTS</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="to-be-great.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">TO BE GREAT</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EMPATHY - George Gondron">
+  <title>EMPATHY - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">EMPATHY</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>EMPATHY
+Empathy is a step beyond sympathy
+Sympathy is to feel sorrow for the circumstances
+Empathy is to feel sorrow with 
+To imagine oneself in the condition of another
+Sympathy is the sharing of one’s emotions intellectually
+Empathy is more vicarious, more visceral
+Almost like taking the place of the other
+Sympathy requires a certain amount of understanding
+Empathy is more spontaneous and immediate
+One could easily say
+Sympathy is of the head
+Empathy is of the heart
+The more individuated a person, the more empathetic
+For they have engaged their own darkness
+They know that we are all more alike than unalike
+That judgment and condemnation are matters
+Of the ego, lacking the heart’s compassion
+They see sameness before differentness
+Those who have never suffered never struggled
+Never yet faced their own human weakness
+Are more capable of sympathy than empathy
+There is a connection that is missing
+One which can say, ‘I have been where you are’
+‘I too have reached the end of my rope’
+One of the greatest motivators for change is pain
+Deep unbearable emotional pain
+The type of pain that produces the ability
+To be empathetic, to be at one with
+Ironically, we live in a culture that avoids pain
+Take a pill, seek distraction, anything to not 
+Face our pain, deal with our pain, learn from our pain
+We learn empathy through learning ourselves
+To the depth of our innermost being
+A path that most avoid and never engage
+Take a few minutes each day for quiet reflection
+Embrace silence, and stillness, with Presence
+Empty the mind, listen to the whispers of the heart</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('EMPATHY', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('EMPATHY', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="emotional-pain.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">EMOTIONAL PAIN</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="empty-or-full.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">EMPTY OR FULL</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

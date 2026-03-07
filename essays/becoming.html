@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BECOMING - George Gondron">
+  <title>BECOMING - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">BECOMING</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>BECOMING
+All personal change is a process of becoming
+Where human creativity is unlimited
+Yet at some point in our lives, we cease to become
+We fall into the trap of simply accepting
+Accepting what is as it is, regardless of the circumstances
+Every dream, every hope, has within it the kernel of success
+But for most of us, the hope fades and the dream disappears
+As we become complacent and accepting of the status quo
+We allow our familiar to become an anchor, a ball and chain
+We encase ourselves in self-made prisons
+A p|rison to which we hold the key
+But we fail to search for the unopened lock
+Our release, our creativity has been buried beneath
+The murmurings of ‘shoulda, coulda, woulda’s’ 
+We listen to the naysayers 
+Fall into the trap of an egoic false self, focused on externals
+Never embracing the potential and possibilities of our true self
+Held within our hearts, soul, and spirit
+We lose the inherent wisdom we once had as a child
+For we are forced to conform to a society 
+That values the material over the personal
+That cares more about production and consumption
+Than human relationships, human connections
+To suffer the loss of a conscious understanding
+Of an innate internal core, and inner reference
+Is also to suffer our capacities for kindness, empathy, and love
+For all humankind, regardless of race, color, or creed
+We are not human ‘doings’, we are human beings
+Meant to ‘become’, to perceive life as relationship
+Become again, never cease to dream, to hope, to be you
+Begin a meditative/contemplative practice
+Connect inner and outer, each day for a few minutes
+Experience silence and stillness, in the presence of Presence
+Your image of Universal Consciousness, of your God
+Empty your mind, breathe in, breathe out a short mantra
+Listen to the whispers of your heart, soul, and spirit
+They         hold your truth, they have your answers, they wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('BECOMING', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('BECOMING', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="bankrupt.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">BANKRUPT</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="beginnings.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">BEGINNINGS</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CRITICAL THOUGHT - George Gondron">
+  <title>CRITICAL THOUGHT - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">CRITICAL THOUGHT</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>CRITICAL THOUGHT
+Little evidence of critical thought today
+Lots of evidence for gullibility
+Maybe it&#39;s the unreliability of all the hype
+But, it would seem most prefer the sensational
+Whether it&#39;s true or false
+I think I remember someone saying
+&#39;Don&#39;t believe what you hear, and half of what you
+ see&#39;
+It&#39;s mostly impossible to confirm what we pass on
+But, if it fits our agenda, we do it anyway
+We actually can become addicted to half-truths
+Un-truths, propaganda, evangelism, and doctrine
+Addiction is not just a stimulant for the body
+But for the mind, the ego as well
+Wanting to belong to the &#39;right&#39; group
+Follow the &#39;legitimate&#39; crowd
+Even though they have questionable ethics
+And maybe a little paradoxical behavior
+Not exactly practicing what they &#39;preach&#39;
+It seems those that are &#39;right&#39; shout the loudest
+Speak for God, and denounce everyone else
+Denying their own &#39;shadow&#39;, and seeing it in others
+Critical thinking, quiet reflection, self-analysis
+All, worth more than the hype, the sensationalism
+Associate with those that are willing to question
+Willing to challenge the status quo
+Nothing is so perfect that it can&#39;t be improved
+So infallible that it can&#39;t be examined
+Risk being a critical thinker
+Seek more than one source
+Especially the Source that dwells within
+Where truth always abides</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('CRITICAL THOUGHT', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('CRITICAL THOUGHT', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="creator.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">CREATOR</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="crossroads-2.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">CROSSROADS 2</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

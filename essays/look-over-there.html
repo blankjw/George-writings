@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOOK OVER THERE - George Gondron">
+  <title>LOOK OVER THERE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">LOOK OVER THERE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>LOOK OVER THERE
+Distraction is a reality that’s ‘baked’ into our culture
+We avoid ‘drilling’ down on facts and truth
+Much preferring to be distracted in order that we
+Might be ‘saved’ from taking a hard look at what is
+As it is, for if we do, we just might have to change
+And one of the ego’s most important tasks 
+Is to resist change, at all costs, on every level
+If we reflect on the idea of change at all
+It goes like this
+What needs to change is not me, it’s you or them
+Or it, anything but me
+Those that work in the field of human behavior and
+Mental processes dealing with emotions and relationships
+Reveal that 70 to 80 % of those who seek counseling
+Do so to change someone else, not themselves
+Let me offer this observation
+The only person we have the power to change
+On any significant level, is ourselves, us
+And if we’re honest, if we’re willing to remove our ‘blinders’
+We know the truth of that statement
+But if the name of the game is blame
+Is to deny and choose distraction instead
+Alas, we cling to the familiar even if the familiar is painful
+Part of the fear behind our resistance to change is
+Whom would I be if I changed? what would I have to give up
+That’s what fear does, focuses on subtraction, not addition
+But love, on the other hand, whispers ‘imagine what you would gain’
+Fear does not comprehend the meaning of freedom
+Only love does
+Fear seeks the distractions, seeks anything that prevents
+Self-examination, self-criticism, self-reflection
+Love embraces self-awareness with the knowledge
+We can only change what we’re willing to clearly see
+A guaranteed path to self-knowledge is a contemplative practice
+Just a few minutes each day for silence, stillness, with Presence
+A time to empty our ‘monkey minds’ and listen to the whispers
+Of our own heart, soul, and spirit, our inner Truth</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('LOOK OVER THERE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('LOOK OVER THERE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="listenj-learnj-experience.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">LISTEN^J LEARN^J EXPERIENCE</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="lost-in-translation.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">LOST IN TRANSLATION</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

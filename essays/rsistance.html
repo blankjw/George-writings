@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RSISTANCE - George Gondron">
+  <title>RSISTANCE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">RSISTANCE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>RESISTANCE
+Of all our personal strengths and weaknesses
+It is the capability of our ego to resist that is our greatest danger
+For without the ego’s approval, we will not readily accept change
+We will resist, defiantly, stubbornly, and consistently
+To be open to the unknown is to be open to mystery 
+To be open to possibility, to opportunity, to greater awareness
+And deeper understanding as opposed to remaining stuck
+In our familiar, clinging to the passivity of our lives
+Spinning our wheels, having the same thoughts and feelings
+Day after day, doing the same things day after day
+Unable to step outside our comfort zone rejecting our resistance
+To broaden our horizons, increase our understanding, become
+More fully human is to risk and be vulnerable 
+As the saying goes, ‘nothing ventured, nothing gained’
+When we resist the unfamiliar we also restrict our freedom
+When we never question, doubt, or critically think
+We limit our own potential and possibility, we are less than
+Ignorance is always the enemy and ignorance can be remedied
+But it is a matter of choice
+We can use social media as our source of truth, or we can
+Seek reliable sources that can be fact checked for authenticity
+Fear is a great motivator, but so is love, choose love
+Peek behind the curtain, avoid the smoke and mirrors, learn
+Education is much more valuable than ‘gaslighting’ or  
+Drinking the ‘Kool Aid’ flavor of the day
+A responsible life seeks clarity and understanding beyond 
+Alternative facts, half-truths, and obvious lies
+Resistance is never the answer, it is the enemy
+Resistance, a closed mind, is simply the refusal to know, to learn
+To become informed with reliable information, to grow
+We have a gift called consciousness, use it well, use it wisely
+Add a meditative/contemplative practice to your life for balance
+It will aid in providing a clear understanding of your resistance
+Spend a few minutes each day in silence, stillness, with Presence
+Empty your mind, focus on your breath, breathe in, breathe out
+Listen to the whispers of your inner guides, your internal core
+They are your true self, they have your answers, they wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('RSISTANCE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('RSISTANCE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="rocket-money.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">ROCKET MONEY</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="safe-combination.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">SAFE COMBINATION</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

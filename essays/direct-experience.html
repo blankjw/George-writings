@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DIRECT EXPERIENCE - George Gondron">
+  <title>DIRECT EXPERIENCE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">DIRECT EXPERIENCE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>DIRECT EXPERIENCE
+The most profound, numinous, and powerful experiences
+Of our individual lives
+Can only be known through direct experience
+Not intellectually or through our five senses
+Only through the ‘ah ha’ moments that occur spontaneously
+Even more mysteriously, something acts as a trigger
+For those experiences and we never know what that trigger may be
+Pain, joy, loneliness, silence, anxiety, etc., etc., etc.
+All have the potential to be a trigger, a stimulus
+When there is no connection between the mind, the ego
+And our inner core, our heart, soul, and spirit
+Then we are trapped in the belief that everything that can be known
+Can only be known through the mind, the five senses, the feelings
+To not have that inner connection, we in essence 
+Are cut off from reality
+To further complicate our path of knowing
+We seem to forget the importance of critical learning
+We rather simply take in what’s offered and call it the truth
+ And the result is dysfunction and chaos
+Witness the environment we live in today, on every level
+A dualistic environment that only knows oppositional thinking
+Right/wrong, good/bad, liberal/conservative, never both/and
+Dualism is the nemesis of our culture
+When everything in life is not about exclusion but inclusion
+Our actions reflect that we prefer to be separate 
+Rather than together, anti-rather than pro
+The danger to all existence on this planet is one thing
+The human mind absent an inner connection, an inner core
+Without some mass paradigm shift in human consciousness
+Our next best path is to change ourselves, as individuals
+That we might have direct experience of the mystery, the numinous
+That path begins with a few minutes of silence, stillness, with 
+Presence (one’s image of a Creator) each day
+Moments to empty our ‘monkey minds’ that dwell on the same
+Thoughts day after day – incessantly
+This contemplative practice brings awareness of the quiet whispers
+Of our heart, soul, and spirit – where our truth and healing abide</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('DIRECT EXPERIENCE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('DIRECT EXPERIENCE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="different-beginnings.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">DIFFERENT BEGINNINGS</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="disconnect.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">DISCONNECT</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

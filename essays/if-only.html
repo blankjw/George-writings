@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IF ONLY - George Gondron">
+  <title>IF ONLY - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">IF ONLY</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>IF ONLY
+We all have them, there are no exceptions
+Those times of &#39;if only&#39;
+And the regrets we carry attached to the &#39;if onlys&#39;
+Are of different degrees, have different meanings
+Each has a significance known only to ourselves
+At least for the most part, if not denied
+But make no mistake, we all have them
+Some relate to the risks not taken, the missed opportunities
+Others for our inability to simply say, &#39;I&#39;m sorry&#39;
+If only I had said, &#39;forgive me, I didn&#39;t mean it&#39;
+Or maybe it was my urge to give you a hug, but I let it pass
+Or say, &#39;I appreciate what you did, it wasn&#39;t necessary&#39;
+Not enough time, that&#39;s a big &#39;if only&#39;
+If only I had more time, it would have been different
+But you know I&#39;m in charge of my time, no one else
+And as usual, blame is always the solution
+For not enough time, for missing the &#39;if onlys&#39;
+It&#39;s never my fault but someone or something else
+Isn&#39;t that the cure for all defense, blame
+Yes, we all have our &#39;if onlys&#39;, but most of us want to forget
+Second thoughts are always a betrayal 
+Of what might have been, or could have been
+And the saddest part of our &#39;if onlys&#39; is very clear
+There are no &#39;do-overs&#39;, we can&#39;t go back
+That&#39;s a funny thing about life
+We can&#39;t change what&#39;s already happened, or not happened
+We can only deal with now
+And that is an option, really the only option
+Dealing with now, the present moment
+Don&#39;t let another day pass with regret
+With another &#39;if only&#39;
+Whatever the reason, the purpose, the goal, the person
+That yearning within that asks for our attention
+Don&#39;t let it pass, there may be no tomorrow
+Be silent, be still, listen to the whispers
+Life is not an &#39;if only&#39;, it is now, not yesterday nor tomorrow
+Please, don&#39;t let it end with a trunk full of &#39;if onlys&#39;</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('IF ONLY', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('IF ONLY', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="if-facts-are-not-enough.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">IF FACTS ARE NOT ENOUGH</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="if-there-were-a-pill.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">IF THERE WERE A PILL</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

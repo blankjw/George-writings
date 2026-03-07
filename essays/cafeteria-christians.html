@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CAFETERIA CHRISTIANS - George Gondron">
+  <title>CAFETERIA CHRISTIANS - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">CAFETERIA CHRISTIANS</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>CAFETERIA CHRISTIANS
+A term I read somewhere which basically means
+Those Christians that pick and choose what they believe
+And conveniently ignore the rest, you know the hard parts
+Mercy, justice, and generosity toward the poor, the outsider,
+The marginalized, the foreigner, the orphan and widow
+You know the ones, the ‘prosperity’ evangelicals taking money
+From widows living on social security while amassing personal
+Fortunes, living in palatial estates, owning jet planes and driving
+Fancy cars, wearing Rolex watches and silk suits
+If you look up the word hypocrite in the dictionary 
+You’ll see their pictures, or perhaps predator is a more apt word
+It’s interesting to note that the one they say they follow
+Wait, perhaps follow is the wrong word for normally if you are
+Following someone you’re attempting to emulate their behavior
+They seemed to have forgotten Jesus never had a home
+Didn’t ride around in a fancy chariot and he criticized the leaders
+Of his own faith, the Jewish establishment
+He discriminated against no one; race, gender, color or creed
+I have a sneaky suspicion that if Jesus returned today
+He would be crucified again, but this time by Christians
+For honestly, who wants to personally feed the hungry, give
+Drink to the thirsty, clothe the naked, visit the prisoner, 
+Take care of the widow and orphan – you, me, anyone?
+Honestly, most of us, Christian, Jew, Muslim, etc., etc., etc.
+Are hypocrites
+We are ‘don’t do as I do’, but are ‘do as I say do’ people
+All belief systems have a definition or an understanding of the 
+Phrase, ‘poverty of spirit’ – yet most follow a path of least resistance
+A path of ‘let me live in my delusion’ not in reality
+As M Scott Peck wrote, let me ignore ‘the road less traveled’
+We each carry the divine DNA of the Mystery that creates ceaselessly
+The name doesn’t matter, the relationship does
+Embrace a meditative/contemplative practice, choose balance
+Spend a few minutes each day in silence, stillness, with Mystery
+Empty your mind, focus on your breath or a short mantra
+Listen for the whispers of your inner guides, your true self
+Your heart, soul, and spirit have your answers, they patiently wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('CAFETERIA CHRISTIANS', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('CAFETERIA CHRISTIANS', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="by-example.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">BY EXAMPLE</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="can-there-be-peace-without-conflict.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">CAN THERE BE PEACE WITHOUT CONFLICT</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

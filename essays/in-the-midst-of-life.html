@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IN THE MIDST OF LIFE - George Gondron">
+  <title>IN THE MIDST OF LIFE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">IN THE MIDST OF LIFE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>IN THE MIDST OF LIFE
+Whatever we may have experienced
+Is not what determines who we become
+It is what we have learned from those experiences
+That&#39;s what fashions our nature, makes us who we are
+Failure is as much a gift, as success, sometimes greater
+A teacher of what not to repeat in our next attempt
+There is an undeniable truth that supports all risk
+Whatever is worth doing
+Is worth doing wrong the first time
+The hardest lessons have the most rewarding results
+What it took to get us to the many plateaus in our life
+Is what we remember the most
+What is necessary for us to learn
+In this mystery of being human
+If not embraced, if held at bay or pushed away
+Will never let us go
+The yearnings may be a silent whisper
+But they will persist, no matter how hard we resist
+In the midst of our lives
+There is no destination, no goal
+There is only the journey, which most will miss
+Their lives filled with busyness at the expense of being
+Every moment of our existence, possibility surrounds us
+Every breath we take there is something new to be learned
+The boundary of the achievable doesn&#39;t exist
+The limits of the conceivable are restricted by false reasoning
+Our minds, our egos are all that hold us back
+In the midst of our lives if we never know compassion
+Not sympathy or pity, but true compassion
+The giving of ourselves with no expectation of return
+For the benefit of the suffering, the needy, the different
+If we haven&#39;t experienced that
+We are lesser for not knowing
+There remains a hole in our soul
+It is not what we gather that matters
+In the midst of our life
+It&#39;s what we give away, of ourselves</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('IN THE MIDST OF LIFE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('IN THE MIDST OF LIFE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="imagination.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">IMAGINATION</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="in-the-quiet-moments.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">IN THE QUIET MOMENTS</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TO BELIEVE - George Gondron">
+  <title>TO BELIEVE - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">TO BELIEVE</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>TO BELIEVE
+‘Believe nothing you hear and only one half that you see’
+A famous quote from Edgar Allen Poe in 1845
+Which today has little validity, especially with the explosion
+Of social media in all its many forms, we are now more likely to
+Believe what we see and add to what we hear because of our
+Emotional tendency to be motivated by fear as opposed to love
+What has happened? Do we no longer use critical thinking,
+Personal reflection, question, doubt, and just merely accept?
+Believing and knowing are vastly different and relying on belief
+Alone can lead us to very dangerous end
+To know is to experience, personally
+Again, what has happened to us that we can be so easily manipulated
+And fooled, believing ‘alternative facts’, hyperbole, half-truths, 
+And obvious lies that even a child would question
+Can we no longer read and research reliable resources of information
+They’re not that difficult to find, or are we that lazy?
+Are we that susceptible to the propaganda and ‘gaslighting’
+That cares only about manipulating and controlling us
+Using us as a means to an end, their end?
+Do we prefer ignorance over truth, over learning, and education?
+Do we lack understanding, awareness, consciousness, and conscience?
+To simply believe without experiential knowing is to be the fool
+Is to be part of the problem and not the solution
+Do morals, ethics, integrity, empathy, and compassion no longer
+Matter, does truth no longer matter, does love?
+We are leaving our children and grandchildren, through our
+Own dysfunctional behavior and choices, poor examples of what we 
+Human beings are called to be
+The irresponsible way, the easy way, the uninformed way
+Is the way whose journey will end in failure
+If you believe, believe what you know through personal experience
+Adopt a meditative/contemplative practice, awaken your inner core
+Spend a few minutes each day in silence, stillness, with Presence
+Focus on your breath or a short mantra, breathe in, breathe out
+The mind will wander, the ego will resist, rinse and repeat
+Awaken your power to discern, listen to your inner guides
+Your heart, soul, and spirit, they have your answers, they wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('TO BELIEVE', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('TO BELIEVE', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="to-believe-is-not-to-know.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">TO BELIEVE IS NOT TO KNOW</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="to-know.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">TO KNOW</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

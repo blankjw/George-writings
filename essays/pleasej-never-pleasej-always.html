@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PLEASE^J NEVER - PLEASE^J A;LWAYS - George Gondron">
+  <title>PLEASE^J NEVER - PLEASE^J A;LWAYS - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">PLEASE^J NEVER - PLEASE^J A;LWAYS</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>PLEASE, NEVER – PLEASE, ALWAYS
+If you have a halfway decent memory
+You may recall quite easily, those voices that are clearly
+Saying, please never do that, or always do this
+What follows those requests are endless scenarios of
+Do’s and don’t’s, hopefully, most of which were ignored
+For who you and I became and are still becoming
+At least some of us, is the result of our personal experiences
+Our failures and successes, our bad decisions and our good ones
+Sadly, there are far too many who still as adults 
+Live by and through the ‘shoulds’ of others
+Whether that other is a single individual, a group, a belief system
+Or the ever-popular’ third party’ narrative, including social media
+What we don’t realize or reflect on is the unspoken message
+We are telling ourselves by following what he, she, they, or it said
+That unspoken message is, they know more than me
+They are smarter than me, I trust them more than myself
+Especially if they use fear and doubt to promote their rhetoric
+To promote and encourage self-development is vastly 
+More important than third-party information or social media
+Especially the development of our own values, ethics, and morals
+Our guide to rightness and wrongness, to good or bad
+To discern the truth from the lie, is never our ego	
+It is the inner guides we all have, heart, soul, and spirit
+As the fox tells the Little Prince, ‘It is only with the heart
+That one sees rightly’
+Life is not just about our thoughts, our too many words
+It is more importantly about balance, about a connection
+To our inner core, our internal references, our very essence
+To embrace a meditative/contemplative practice
+Is to awaken our inner guides so needed for balance
+To take a few minutes each day for silence, stillness, and Presence
+To empty our ‘monkey minds’ of their incessant and repetitive 
+Thoughts – to learn how to be and not just do
+To trust our own innate abilities that promote our wholeness
+If we but take the time, we are the energy of the universe
+Listen to the whispers of your heart, soul, and spirit
+They hold your true self, have your answers, they patiently wait</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('PLEASE^J NEVER - PLEASE^J A;LWAYS', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('PLEASE^J NEVER - PLEASE^J A;LWAYS', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="plausible-deniability.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">PLAUSIBLE DENIABILITY</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="politics-and-religion.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">POLITICS AND RELIGION</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

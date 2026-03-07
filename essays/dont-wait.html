@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DON&#39;T WAIT - George Gondron">
+  <title>DON&#39;T WAIT - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">DON&#39;T WAIT</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>DON&#39;T WAIT
+The one who crossed your mind
+Followed with the thought, &#39;perhaps I will call&#39; 
+Do it, don&#39;t wait, make the call
+You promised someone a visit, keep your promise
+If it&#39;s something we mean to do, and yet we don&#39;t
+With someone we care enough about
+Then we fail ourselves and the one for whom we care
+Our deepest regrets, more often than not
+Are, not what we&#39;ve done
+But, what we haven&#39;t done
+To hear a voice, to feel a hug, see a smile
+Means so much more than words on paper
+Than a preprinted card with a signature only
+Than a text on a screen with a &#39;smiley face&#39;
+We can forward images, sounds, and words on a screen
+But we can&#39;t forward ourselves
+We can&#39;t forward that hug or touch that means so much
+There&#39;s a feeling we get when we see little ones playing
+When we see a child hug an adult, as only a child can
+Unafraid to show their feelings, their caring, their love
+Somehow, as we become adults, that impulse get lost
+Or it becomes buried and hidden, but it&#39;s always there
+There is a yearning that abides within each one of us
+Contained within every human life, every human soul
+Regardless of race, regardless of gender, regardless of belief
+That yearning is to be connected, to matter, to be of value
+Heartache happens mostly because of people
+And a heart only mends through people as well
+Life is too short to let those moments slip by
+Those moments of the ones that cross our minds
+There is nothing more important than all relationships
+Whether fleeting or strong, they keep us connected
+Connected to our yearnings
+For ourselves and to others
+So, please don&#39;t wait
+Make that call, keep that promise
+Please</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('DON&#39;T WAIT', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('DON&#39;T WAIT', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="dont-tell-me.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">DON&#39;T TELL ME</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="dr-al-shamy.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">DR AL-SHAMY</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

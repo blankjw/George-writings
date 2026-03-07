@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PERPETUAL FEAR - George Gondron">
+  <title>PERPETUAL FEAR - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">PERPETUAL FEAR</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>PERPETUAL FEAR
+All negative emotion has its origin in fear
+Just as all positive emotion is grounded in love
+There are no better means of controlling another
+Of controlling a group, no matter how large
+Than through fear
+Discrimination, prejudice, bias, segregation, exclusion
+All are rooted in fear
+In our digital age, an age of instant information
+How easy it is to spread that fear
+It&#39;s almost as if the mind thrives on being against
+No longer can we leave our doors unlocked, night or day
+No longer can the children dare be outside after dark
+Suspicious of the stranger
+Wary of the passerby that seems different from myself
+Fear destroys trust
+Turns faith into an impossible conviction
+It is a malaise that hangs like a cloud 
+Not quiet out of consciousness
+Lingering in the dim corners of the mind
+We dare not venture into unfamiliar surroundings, alone
+The negativity of fear is like an unseen energy
+Trapping our spontaneity and binding our flexibility
+Fear, the unseen invisible enemy 
+Through the constant refrain of &#39;what if&#39;
+Fear can&#39;t be driven away or out by force
+Even though there are those who &#39;shout&#39; that it can
+Force creates only more fear
+What does remove fear, doubt, angst, and aversion
+Only love, kindness, compassion, and empathy
+Love changes everything
+It is the most powerful force in the world
+Where all else fails, love succeeds
+To know love is to know the One who is Love
+That knowing we carry in our innermost being
+Found in the silence and stillness
+In each breath we take, each beat of our heart
+It is there, it is Life, it is Love, It overcomes fear</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('PERPETUAL FEAR', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('PERPETUAL FEAR', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="pain.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">PAIN</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="personal-change-is-a-choice.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">PERSONAL CHANGE IS A CHOICE</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

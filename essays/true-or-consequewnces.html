@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TRUE OR CONSEQUEWNCES - George Gondron">
+  <title>TRUE OR CONSEQUEWNCES - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">TRUE OR CONSEQUEWNCES</h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>TRUTH OR CONSEQUENCES
+To insist that what we believe is true
+Means, that we are willing to accept the consequences if it’s not
+Therein lies the problem
+Seldom, if ever, do we see beyond our own noses
+We are so against anything other than our truth
+Which in most cases is not based on personal experience
+But rather, based on third-party information
+You know the kind, ‘he said, she said’, kind
+And if our expectations are not fulfilled, are not met
+Because of this third-party truth
+We have plenty of excuses for why we believed it at all
+Excuses that have no validity whatsoever
+Like the argument against common sense gun legislation
+‘Will they’re gonna come and take our guns’
+I dare you to provide any facts that support that lie
+The argument is usually, ‘Well they might’
+Now that’s an argument for anything with common sense
+‘Well they might’
+Normally you suffer the consequences of an action
+Of non-compliance
+Like If you don’t pay your property taxes
+You’ll lose your real estate
+Or if you don’t have a valid driver’s license
+You may lose your right to drive
+And in both cases, there are requirements that need
+To be met in order to have that real estate and drive the vehicle
+Please, look beyond what you may believe
+And ask if it makes sense, or is it based on emotions
+We believe far too much, with far too little evidence
+Not to mention far too little personal experience
+Engage a meditative/contemplative practice
+Balance outer and inner, becoming a discerning person
+Spend a few minutes each day in silence, with stillness, 
+In the presence of your image of a Creator, your God
+Awaken your inner core, your internal resources
+They hold your true self, they have your answers
+What you hold inside is much greater than the ego</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('TRUE OR CONSEQUEWNCES', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('TRUE OR CONSEQUEWNCES', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="trials.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">TRIALS</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="truth.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">TRUTH</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

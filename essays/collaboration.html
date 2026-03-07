@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COLLABORATION   - George Gondron">
+  <title>COLLABORATION   - George Gondron Writings</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .pn-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0 1rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+    }
+    .pn-link {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      max-width: 38%;
+      text-decoration: none;
+      color: var(--ink-mid);
+      transition: color .2s;
+    }
+    .pn-link:hover { color: var(--gold); }
+    .pn-prev { align-items: flex-start; }
+    .pn-next { align-items: flex-end; text-align: right; }
+    .pn-arrow { font-size: 1.1rem; color: var(--gold); }
+    .pn-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .pn-title {
+      font-size: .85rem;
+      line-height: 1.35;
+      font-family: var(--serif);
+    }
+    .pn-disabled { visibility: hidden; }
+    .pn-all {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      text-decoration: none;
+      align-self: center;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .pn-all:hover { color: var(--gold); }
+    @media(max-width:600px) {
+      .pn-title { display: none; }
+      .pn-link { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="site-title"><a href="../" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+      <ul class="nav-links">
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#browse">Browse</a></li>
+        <li><a href="../#about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">☽ Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="essay-content">
+      <div class="essay-header">
+        <span class="essay-type">ESSAY</span>
+        <h1 class="essay-title">COLLABORATION  </h1>
+        <div class="essay-meta">By George Gondron</div>
+      </div>
+
+      <div class="essay-text">
+      <p>COLLABORATION
+Have we lost the ability to be collaborative with each other?
+To compromise, to cooperate, to be conciliatory
+Perhaps to an outsider looking in
+Witnessing our cultural interactions
+The answer might be yes
+The divide between us, among us, within us
+Seems to be growing more and more exaggerated
+Our minds are more and more polarized 
+Extreme myopic thinking, very dualistic thinking
+The exception to the rule seems to be
+The individual who can comprehend 
+That a fully human life is always both/and
+As opposed to either/or
+Life is situational
+Actions taken today may be considered advantageous
+But tomorrow, absolute wrongs
+Human thinking, the evolution of consciousness
+An increase in awareness has always been 
+When the individual or small group of individuals
+Perceives through a happenstance experience
+Something new, something beyond the status quo
+Human nature’s first response is to resist
+We’ve all resisted what is opposed to our familiar
+Even when that familiar is dysfunctional
+Those few, who offer a new point of view
+Are more often than not, rejected or ignored
+Whether those beliefs were scientific, educational
+Religious, political, social, or economic
+And of course, the extreme rejection is death
+History is replete with those who have died for their
+Beliefs, especially religious and scientific beliefs
+They were unwilling to reject their experiential truth
+Human potential, creativity, and truth
+Are internal, not external processes
+Discovered in silence, stillness, with Presence
+A meditative/contemplative daily practice
+Necessary moments to hear the whispers of Isness</p>
+      <p>George G</p>
+
+      </div>
+
+      <div class="share-buttons">
+        <a href="javascript:shareTwitter('COLLABORATION  ', window.location.href)" class="share-btn">Share on Twitter</a>
+        <a href="javascript:shareFacebook(window.location.href)" class="share-btn">Share on Facebook</a>
+        <a href="javascript:shareEmail('COLLABORATION  ', window.location.href)" class="share-btn">Share via Email</a>
+      </div>
+
+
+  <nav class="pn-nav">
+    <a href="clarity.html" class="pn-link pn-prev"><span class="pn-arrow">←</span><span class="pn-label">Previous</span><span class="pn-title">CLARITY</span></a>
+    <a href="../" class="pn-all">All Writings</a>
+    <a href="complicity.html" class="pn-link pn-next"><span class="pn-arrow">→</span><span class="pn-label">Next</span><span class="pn-title">COMPLICITY</span></a>
+  </nav>
+    </article>
+  </main>
+
+  <footer>
+    <p class="footer-name">George Gondron — Writings &amp; Reflections</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-faint);">
+      A collection of philosophical essays, poems, and reflections
+    </p>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
