@@ -109,7 +109,7 @@ function renderAccordion(essays) {
         card.style.overflow = 'hidden';
         card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
         card.style.transition = 'transform 0.3s, box-shadow 0.3s';
-        card.innerHTML = `<img src="${essay.title}" style="width:100%;height:150px;object-fit:cover;display:block;" alt="Haiku" loading="lazy">`;
+        card.innerHTML = `<img src="${essay.excerpt}" style="width:100%;height:150px;object-fit:cover;display:block;" alt="Haiku" loading="lazy">`;
         card.addEventListener('mouseover', () => {
           card.style.transform = 'scale(1.05)';
           card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
@@ -119,7 +119,7 @@ function renderAccordion(essays) {
           card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
         });
         // Click to view full-screen
-        card.addEventListener('click', () => viewHaikuFullscreen(essay.title));
+        card.addEventListener('click', () => viewHaikuFullscreen(essay.excerpt));
         body.appendChild(card);
       } else {
         // Render as text link
@@ -212,7 +212,7 @@ function initRandom() {
     const r = allEssays[Math.floor(Math.random() * allEssays.length)];
     const type = (r.type || 'essay').toLowerCase();
     if (type === 'haiku') {
-      viewHaikuFullscreen(r.title);
+      viewHaikuFullscreen(r.excerpt);
     } else {
       window.location.href = 'essays/' + r.slug + '.html';
     }
