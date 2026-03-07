@@ -53,26 +53,46 @@ function renderAccordion(essays) {
   const container = document.getElementById('writings-accordion');
   if (!container) return;
 
-  if (essays.length === 0) {
-    container.innerHTML = '<p style="padding:2rem 0;color:var(--ink-faint);font-style:italic;">Nothing found.</p>';
+  // Split haikus from text writings — haikus render as image grid, never in accordion
+  const haikus = essays.filter(e => (e.type || 'essay').toLowerCase() === 'haiku');
+  const textItems = essays.filter(e => (e.type || 'essay').toLowerCase() !== 'haiku');
+
+  container.innerHTML = '';
+
+  // ── Haiku image grid (shown above accordion when haikus are in results) ──
+  if (haikus.length > 0) {
+    const grid = document.createElement('div');
+    grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:2rem;';
+    haikus.forEach(essay => {
+      const card = document.createElement('div');
+      card.style.cssText = 'cursor:pointer;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12);transition:transform .25s,box-shadow .25s;';
+      card.innerHTML = `<img src="${essay.excerpt}" style="width:100%;height:140px;object-fit:cover;display:block;" alt="Haiku" loading="lazy">`;
+      card.addEventListener('mouseover', () => { card.style.transform='translateY(-3px)'; card.style.boxShadow='0 6px 20px rgba(0,0,0,.2)'; });
+      card.addEventListener('mouseout',  () => { card.style.transform='';               card.style.boxShadow='0 2px 8px rgba(0,0,0,.12)'; });
+      card.addEventListener('click', () => viewHaikuFullscreen(essay.excerpt));
+      grid.appendChild(card);
+    });
+    container.appendChild(grid);
+  }
+
+  // ── Text writings accordion ──
+  if (textItems.length === 0) {
+    if (haikus.length === 0) {
+      container.innerHTML = '<p style="padding:2rem 0;color:var(--ink-faint);font-style:italic;">Nothing found.</p>';
+    }
     return;
   }
 
   // Group by first letter (skip leading articles)
   const groups = {};
-  essays.forEach(e => {
-    let title = (e.title || '').toUpperCase();
-    // Strip leading "A ", "AN ", "THE "
-    title = title.replace(/^(A |AN |THE )/, '');
+  textItems.forEach(e => {
+    let title = (e.title || '').toUpperCase().replace(/^(A |AN |THE )/, '');
     const letter = title[0] || '#';
     if (!groups[letter]) groups[letter] = [];
     groups[letter].push(e);
   });
 
-  const letters = Object.keys(groups).sort();
-  container.innerHTML = '';
-
-  letters.forEach(letter => {
+  Object.keys(groups).sort().forEach(letter => {
     const items = groups[letter];
     const section = document.createElement('div');
     section.className = 'accordion-section';
@@ -88,55 +108,20 @@ function renderAccordion(essays) {
     const body = document.createElement('div');
     body.className = 'accordion-body';
 
-    // Create a grid for haikus, list for others
-    const hasHaikus = items.some(e => (e.type || 'essay').toLowerCase() === 'haiku');
-    if (hasHaikus) {
-      body.style.display = 'grid';
-      body.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
-      body.style.gap = '1rem';
-    }
-
     items.forEach(essay => {
-      const type = (essay.type || 'essay').toLowerCase();
-      const typeLabel = type.toUpperCase();
-      
-      if (type === 'haiku') {
-        // Render as image card
-        const card = document.createElement('div');
-        card.className = 'haiku-card';
-        card.style.cursor = 'pointer';
-        card.style.borderRadius = '4px';
-        card.style.overflow = 'hidden';
-        card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-        card.style.transition = 'transform 0.3s, box-shadow 0.3s';
-        card.innerHTML = `<img src="${essay.excerpt}" style="width:100%;height:150px;object-fit:cover;display:block;" alt="Haiku" loading="lazy">`;
-        card.addEventListener('mouseover', () => {
-          card.style.transform = 'scale(1.05)';
-          card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-        });
-        card.addEventListener('mouseout', () => {
-          card.style.transform = 'scale(1)';
-          card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-        });
-        // Click to view full-screen
-        card.addEventListener('click', () => viewHaikuFullscreen(essay.excerpt));
-        body.appendChild(card);
-      } else {
-        // Render as text link
-        const link = document.createElement('a');
-        link.className = 'writing-entry';
-        link.href = 'essays/' + essay.slug + '.html';
-        link.innerHTML = `
-          <span class="entry-type">${typeLabel}</span>
-          <span class="entry-title">${essay.title}</span>
-        `;
-        body.appendChild(link);
-      }
+      const typeLabel = (essay.type || 'essay').toUpperCase();
+      const link = document.createElement('a');
+      link.className = 'writing-entry';
+      link.href = 'essays/' + essay.slug + '.html';
+      link.innerHTML = `
+        <span class="entry-type">${typeLabel}</span>
+        <span class="entry-title">${essay.title}</span>
+      `;
+      body.appendChild(link);
     });
 
     toggle.addEventListener('click', () => {
       const isOpen = section.classList.toggle('open');
-      // Close others if search is empty (full browsing mode)
       const searchBox = document.getElementById('search-box');
       if (isOpen && searchBox && !searchBox.value) {
         document.querySelectorAll('.accordion-section.open').forEach(s => {
