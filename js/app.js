@@ -88,16 +88,50 @@ function renderAccordion(essays) {
     const body = document.createElement('div');
     body.className = 'accordion-body';
 
+    // Create a grid for haikus, list for others
+    const hasHaikus = items.some(e => (e.type || 'essay').toLowerCase() === 'haiku');
+    if (hasHaikus) {
+      body.style.display = 'grid';
+      body.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+      body.style.gap = '1rem';
+    }
+
     items.forEach(essay => {
-      const link = document.createElement('a');
-      link.className = 'writing-entry';
-      link.href = 'essays/' + essay.slug + '.html';
-      const typeLabel = (essay.type || 'essay').toUpperCase();
-      link.innerHTML = `
-        <span class="entry-type">${typeLabel}</span>
-        <span class="entry-title">${essay.title}</span>
-      `;
-      body.appendChild(link);
+      const type = (essay.type || 'essay').toLowerCase();
+      const typeLabel = type.toUpperCase();
+      
+      if (type === 'haiku') {
+        // Render as image card
+        const card = document.createElement('div');
+        card.className = 'haiku-card';
+        card.style.cursor = 'pointer';
+        card.style.borderRadius = '4px';
+        card.style.overflow = 'hidden';
+        card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        card.style.transition = 'transform 0.3s, box-shadow 0.3s';
+        card.innerHTML = `<img src="${essay.title}" style="width:100%;height:150px;object-fit:cover;display:block;" alt="Haiku" loading="lazy">`;
+        card.addEventListener('mouseover', () => {
+          card.style.transform = 'scale(1.05)';
+          card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        });
+        card.addEventListener('mouseout', () => {
+          card.style.transform = 'scale(1)';
+          card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        });
+        // Click to view full-screen
+        card.addEventListener('click', () => viewHaikuFullscreen(essay.title));
+        body.appendChild(card);
+      } else {
+        // Render as text link
+        const link = document.createElement('a');
+        link.className = 'writing-entry';
+        link.href = 'essays/' + essay.slug + '.html';
+        link.innerHTML = `
+          <span class="entry-type">${typeLabel}</span>
+          <span class="entry-title">${essay.title}</span>
+        `;
+        body.appendChild(link);
+      }
     });
 
     toggle.addEventListener('click', () => {
@@ -117,23 +151,45 @@ function renderAccordion(essays) {
   });
 }
 
-// ─── Search ───────────────────────────────────────────────────
-function initSearch() {
-  const box = document.getElementById('search-box');
-  if (!box) return;
-  box.addEventListener('input', () => {
-    const q = box.value.toLowerCase().trim();
-    const filtered = getFiltered(q);
+function viewHaikuFullscreen(imagePath) {
+  const modal = document.createElement('div');
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer;
+  `;
+  
+  const img = document.createElement('img');
+  img.src = imagePath;
+  img.style.cssText = `
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  `;
+  
+  modal.appendChild(img);
+  modal.addEventListener('click', () => modal.remove());
+  document.body.appendChild(modal);
+}
 
-    // In search mode, open all matching groups
+// ─── Search + Filter ──────────────────────────────────────────
+function initSearch() {
+  const searchBox = document.getElementById('search-box');
+  if (!searchBox) return;
+  searchBox.addEventListener('input', (e) => {
+    const filtered = getFiltered(e.target.value);
     renderAccordion(filtered);
-    if (q) {
-      document.querySelectorAll('.accordion-section').forEach(s => s.classList.add('open'));
-    }
   });
 }
 
-// ─── Filter Pills ─────────────────────────────────────────────
 function initPills() {
   document.querySelectorAll('.pill').forEach(pill => {
     pill.addEventListener('click', () => {
@@ -141,19 +197,25 @@ function initPills() {
       pill.classList.add('active');
       activeFilter = pill.dataset.filter;
       const searchBox = document.getElementById('search-box');
-      const q = searchBox ? searchBox.value.toLowerCase().trim() : '';
-      renderAccordion(getFiltered(q));
+      const query = searchBox ? searchBox.value : '';
+      const filtered = getFiltered(query);
+      renderAccordion(filtered);
     });
   });
 }
 
-// ─── Random ───────────────────────────────────────────────────
+// ─── Random Writing ───────────────────────────────────────────
 function initRandom() {
   const btn = document.getElementById('random-btn');
-  if (!btn || !allEssays.length) return;
+  if (!btn || allEssays.length === 0) return;
   btn.addEventListener('click', () => {
-    const pick = allEssays[Math.floor(Math.random() * allEssays.length)];
-    window.location.href = 'essays/' + pick.slug + '.html';
+    const r = allEssays[Math.floor(Math.random() * allEssays.length)];
+    const type = (r.type || 'essay').toLowerCase();
+    if (type === 'haiku') {
+      viewHaikuFullscreen(r.title);
+    } else {
+      window.location.href = 'essays/' + r.slug + '.html';
+    }
   });
 }
 
@@ -162,67 +224,35 @@ async function loadBlog() {
   try {
     const res = await fetch('blog.json');
     const posts = await res.json();
-    const list = document.getElementById('blog-list');
-    if (!list) return;
-
-    list.innerHTML = '';
-    posts.forEach(post => {
-      const article = document.createElement('article');
-      article.className = 'blog-post';
-      const dateStr = new Date(post.date).toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-      });
-      article.innerHTML = `
-        <time class="blog-date">${dateStr}</time>
-        <h3 class="blog-title">${post.title}</h3>
-        <p class="blog-excerpt">${post.excerpt}</p>
-      `;
-      list.appendChild(article);
-    });
+    const container = document.getElementById('blog-list');
+    if (!container) return;
+    container.innerHTML = posts.map(p => `
+      <article class="blog-post">
+        <time class="blog-date">${p.date}</time>
+        <h3 class="blog-title">${p.title}</h3>
+        <p class="blog-excerpt">${p.excerpt}</p>
+      </article>
+    `).join('');
   } catch (e) {
-    // Blog fails silently
+    // Blog section is optional
   }
 }
 
-// ─── Dark Mode ────────────────────────────────────────────────
+// ─── Theme ────────────────────────────────────────────────────
 function initTheme() {
-  // Works on both homepage (id="theme-btn") and essay pages (id="theme-toggle")
-  const btn = document.getElementById('theme-btn') || document.getElementById('theme-toggle');
-
-  // Apply saved theme immediately (before any button interaction)
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDarkOnLoad = saved === 'dark' || (!saved && prefersDark);
-  if (isDarkOnLoad) {
-    document.body.classList.add('dark');
-  }
-
-  if (!btn) return;
-
-  // Set button label to match current state
-  btn.textContent = isDarkOnLoad ? '☀ Light' : '☽ Dark';
-
-  btn.addEventListener('click', () => {
-    const isDark = document.body.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    btn.textContent = isDark ? '☀ Light' : '☽ Dark';
+  const themeBtn = document.getElementById('theme-btn');
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+  if (themeBtn) themeBtn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = current === 'light' ? 'dark' : 'light';
+    setTheme(next);
   });
 }
 
-// ─── Share Functions ──────────────────────────────────────────
-function shareTwitter(title, url) {
-  const text = encodeURIComponent(`"${title}" — George Gondron`);
-  const u = encodeURIComponent(url);
-  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${u}`, '_blank');
-}
-
-function shareFacebook(url) {
-  const u = encodeURIComponent(url);
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=${u}`, '_blank');
-}
-
-function shareEmail(title, url) {
-  const subject = encodeURIComponent(`"${title}" — George Gondron`);
-  const body = encodeURIComponent(`I thought you might enjoy this writing by George Gondron:\n\n${url}`);
-  window.location.href = `mailto:?subject=${subject}&body=${body}`;
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  const btn = document.getElementById('theme-btn');
+  if (btn) btn.textContent = theme === 'light' ? '☽ Dark' : '☀ Light';
 }
