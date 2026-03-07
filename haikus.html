@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haiku Illustrations - George Gondron">
+    <title>Haikus - George Gondron Writings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .haiku-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .haiku-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .haiku-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        }
+        
+        .haiku-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .haiku-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .haiku-modal.active {
+            display: flex;
+        }
+        
+        .haiku-modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .haiku-modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        
+        .haiku-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+        
+        .haiku-modal-close:hover {
+            opacity: 0.7;
+        }
+        
+        .haiku-modal-nav {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        .haiku-modal-prev, .haiku-modal-next {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .haiku-modal-prev:hover, .haiku-modal-next:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .haiku-intro {
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--ink-mid);
+        }
+        
+        .haiku-intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+        
+        @media (max-width: 768px) {
+            .haiku-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            .haiku-modal-content img {
+                max-height: 80vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-nav">
+                <h1 class="site-title"><a href="./" style="text-decoration: none; color: inherit;">George Gondron</a></h1>
+                <nav class="site-nav">
+                    <a href="./" class="nav-link">Essays & Poems</a>
+                    <a href="haikus.html" class="nav-link active">Haikus</a>
+                    <a href="#about" class="nav-link">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Haiku Illustrations</h1>
+            <div class="haiku-intro">
+                <p>A collection of visual haiku works — visual poetry capturing moments of beauty, contemplation, and the essence of being.</p>
+                <p style="font-size: 0.95rem; color: var(--ink-faint);">Click any image to view in full screen</p>
+            </div>
+        </section>
+
+        <div class="haiku-gallery" id="haikuGallery"></div>
+    </main>
+
+    <div class="haiku-modal" id="haikuModal">
+        <div class="haiku-modal-content">
+            <button class="haiku-modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="Haiku">
+            <div class="haiku-modal-nav">
+                <button class="haiku-modal-prev" id="prevBtn">← Prev</button>
+                <span id="imageCounter"></span>
+                <button class="haiku-modal-next" id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 George Gondron. All writings shared freely.</p>
+            <div class="footer-links">
+                <a href="mailto:ggondron@hotmail.com">Email</a>
+                <a href="https://www.facebook.com/gwgondron" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // List of all haiku images
+        const haikuImages = [
+            'image.png', 'image_1.png', 'image_2.png', 'image_3.png', 'image_4.png',
+            'image_5.png', 'image_6.png', 'image_7.png', 'image_8.png', 'image_9.png',
+            'image_10.png', 'image_11.png', 'image_12.png', 'image_13.png', 'image_14.png',
+            'image_15.png', 'image_16.png', 'image_17.png', 'image_18.png', 'image_19.png',
+            'image_20.png', 'image_21.png', 'image_22.png', 'image_23.png', 'image_24.png',
+            'image_25.png', 'image_26.png', 'image_27.png', 'image_28.png', 'image_29.png',
+            'image_30.png', 'image_31.png', 'image_32.png', 'image_33.png', 'image_34.png',
+            'image_35.png', 'image_36.png', 'image_37.png', 'image_38.png', 'image_39.png',
+            'image_40.png', 'image_41.png', 'image_42.png', 'image_43.png', 'image_44.png',
+            'image_45.png', 'image_46.png', 'image_47.png', 'image_48.png', 'image_49.png',
+            'image_50.png', 'image_51.png', 'image_52.png', 'image_53.png', 'image_54.png',
+            'image_55.png', 'image_56.png', 'image_57.png', 'image_58.png', 'image_59.png',
+            'image_60.png', 'image_61.png', 'image_62.png', 'image_63.png', 'image_64.png',
+            'image_65.png', 'image_66.png', 'image_67.png', 'image_68.png', 'image_69.png',
+            'image_70.png', 'image_71.png', 'image_72.png', 'image_73.png', 'image_74.png',
+            'image_75.png', 'image_76.png', 'image_77.png', 'image_78.png', 'image_79.png',
+            'image_80.png', 'image_81.png', 'image_82.png', 'image_83.png', 'image_84.png',
+            'image_85.png', 'image_86.png', 'image_87.png', 'image_88.png', 'image_89.png',
+            'image_90.png', 'image_91.png', 'image_92.png', 'image_93.png', 'image_94.png',
+            'image_95.png', 'image_96.png', 'image_97.png', 'image_98.png', 'image_99.png',
+            'image_100.png', 'image_101.png', 'image_102.png', 'image_103.png', 'image_104.png',
+            'image_105.png', 'image_106.png', 'image_107.png', 'image_108.png', 'image_109.png',
+            'image_110.png', 'image_111.png', 'image_112.png', 'image_113.png', 'image_114.png',
+            'image_115.png', 'image_116.png', 'image_117.png', 'image_118.png', 'image_119.png',
+            'image_120.png', 'image_121.png', 'image_122.png', 'image_123.png', 'image_124.png',
+            'image_125.png', 'image_126.png', 'image_127.png', 'image_128.png', 'image_129.png',
+            'image_130.png', 'image_131.png', 'image_132.png', 'image_133.png', 'image_134.png',
+            'image_135.png', 'image_136.png', 'image_137.png', 'image_138.png', 'image_139.png',
+            'image_140.png', 'image_141.png', 'image_142.png', 'image_143.png', 'image_144.png',
+            'image_145.png', 'image_146.png'
+        ];
+
+        let currentIndex = -1;
+        const gallery = document.getElementById('haikuGallery');
+        const modal = document.getElementById('haikuModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const imageCounter = document.getElementById('imageCounter');
+
+        // Build gallery grid
+        haikuImages.forEach((img, index) => {
+            const item = document.createElement('div');
+            item.className = 'haiku-item';
+            item.innerHTML = `<img src="haikus-web/${img}" alt="Haiku ${index + 1}" loading="lazy">`;
+            item.addEventListener('click', () => openModal(index));
+            gallery.appendChild(item);
+        });
+
+        function openModal(index) {
+            currentIndex = index;
+            modalImage.src = `haikus-web/${haikuImages[index]}`;
+            updateCounter();
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            currentIndex = -1;
+        }
+
+        function updateCounter() {
+            imageCounter.textContent = `${currentIndex + 1} / ${haikuImages.length}`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % haikuImages.length;
+            modalImage.src = `haikus-web/${haikuImages[currentIndex]}`;
+            updateCounter();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + haikuImages.length) % haikuImages.length;
+            modalImage.src = `haikus-web/${haikuImages[currentIndex]}`;
+            updateCounter();
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
