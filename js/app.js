@@ -240,24 +240,19 @@ async function loadBlog() {
 
 // ─── Theme ────────────────────────────────────────────────────
 function initTheme() {
-  // Support both #theme-btn (main page) and #theme-toggle (essay pages)
+  // Support #theme-btn (main/haiku page) and #theme-toggle (essay pages)
   const themeBtn = document.getElementById('theme-btn') || document.getElementById('theme-toggle');
   const savedTheme = localStorage.getItem('theme') || 'light';
   setTheme(savedTheme);
   if (themeBtn) themeBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark');
-    setTheme(isDark ? 'light' : 'dark');
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    setTheme(current === 'dark' ? 'light' : 'dark');
   });
 }
 
 function setTheme(theme) {
-  if (theme === 'dark') {
-    document.body.classList.add('dark');
-  } else {
-    document.body.classList.remove('dark');
-  }
+  document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
-  // Update whichever button exists on this page
   const btn = document.getElementById('theme-btn') || document.getElementById('theme-toggle');
   if (btn) btn.textContent = theme === 'dark' ? '☀ Light' : '☽ Dark';
 }

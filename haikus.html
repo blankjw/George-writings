@@ -6,13 +6,9 @@
     <meta name="description" content="Haiku Illustrations - George Gondron">
     <title>Haikus - George Gondron Writings</title>
     <!-- Apply theme BEFORE paint to prevent flash of wrong theme -->
-    <script>
-        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('pre-dark');
-    </script>
     <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');</script>
     <style>
-        /* Pre-dark: apply dark body class instantly before JS runs */
-        html.pre-dark body { background: #141210; }
 
         /* ── Haiku gallery ── */
         .haiku-page {
