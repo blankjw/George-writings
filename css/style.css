@@ -26,11 +26,11 @@
 
 body.dark {
   --ink:        #e8e2d8;
-  --ink-mid:    #a89e92;
-  --ink-faint:  #605850;
+  --ink-mid:    #b0a898;   /* slightly lighter for better contrast */
+  --ink-faint:  #897f75;   /* was #605850 — too dark, nearly invisible */
   --paper:      #141210;
-  --paper-tint: #1c1a18;
-  --rule:       #2c2824;
+  --paper-tint: #1e1c1a;
+  --rule:       #3a3228;   /* was #2c2824 — too dark, borders invisible */
   --gold:       #c49848;
   --gold-hover: #ddb860;
 }
@@ -958,4 +958,82 @@ footer:not(.footer) p { margin-top: .3rem; }
     padding: 0 1.3rem;
   }
   .nav-links { display: none; }
+}
+
+
+/* ── Dark mode: btn-ghost border fix ── */
+body.dark .btn-ghost {
+  border-color: #4a4238;
+  color: var(--ink-mid);
+}
+body.dark .btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── Dark mode: search box ── */
+body.dark .search-box {
+  color: var(--ink);
+  border-bottom-color: #4a4238;
+}
+
+/* ── Dark mode: share buttons ── */
+body.dark a.share-btn {
+  border-color: #4a4238;
+  color: var(--ink-mid);
+}
+body.dark a.share-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── Dark mode: accordion hover ── */
+body.dark .accordion-toggle:hover {
+  background: var(--paper-tint);
+}
+body.dark a.writing-entry:hover {
+  background: var(--paper-tint);
+}
+
+/* ── Dark mode: pill borders ── */
+body.dark .pill {
+  border-color: #4a4238;
+  color: var(--ink-mid);
+}
+body.dark .pill:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+body.dark .pill.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+/* ── Dark mode: masthead nav links ── */
+body.dark .masthead-nav a {
+  color: var(--ink-mid);
+}
+body.dark .masthead-nav a:hover {
+  color: var(--gold);
+}
+body.dark #theme-btn {
+  color: var(--ink-mid);
+}
+body.dark #theme-btn:hover {
+  color: var(--gold);
+}
+body.dark .masthead-name {
+  color: var(--ink);
+}
+
+/* ── Dark mode: essay page nav ── */
+body.dark .nav-links a {
+  color: var(--ink-mid);
+}
+body.dark button.theme-toggle {
+  color: var(--ink-mid);
+}
+body.dark .back-link {
+  color: var(--ink-mid);
 }

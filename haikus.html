@@ -137,7 +137,7 @@
             padding: 1rem 0;
         }
 
-        [data-theme="dark"] .site-header {
+        body.dark .site-header {
             background: var(--bg-dark, #1a1a1a);
             color: var(--ink-light, #f0f0f0);
             border-bottom-color: #333;
@@ -185,12 +185,12 @@
             font-weight: 600;
         }
 
-        [data-theme="dark"] .nav-link {
+        body.dark .nav-link {
             color: var(--ink-faint-dark, #aaa);
         }
 
-        [data-theme="dark"] .nav-link:hover,
-        [data-theme="dark"] .nav-link.active {
+        body.dark .nav-link:hover,
+        body.dark .nav-link.active {
             color: var(--ink-light, #f0f0f0);
         }
 
@@ -214,7 +214,7 @@
             font-size: 0.9rem;
         }
 
-        [data-theme="dark"] .site-footer {
+        body.dark .site-footer {
             border-top-color: #333;
             color: var(--ink-faint-dark, #999);
         }
@@ -258,11 +258,11 @@
             color: var(--ink);
         }
 
-        [data-theme="dark"] #themeBtn {
+        body.dark #themeBtn {
             color: var(--ink-faint-dark, #aaa);
         }
 
-        [data-theme="dark"] #themeBtn:hover {
+        body.dark #themeBtn:hover {
             color: var(--ink-light, #f0f0f0);
         }
         
@@ -341,18 +341,21 @@
             setTheme(savedTheme);
             if (themeBtn) {
                 themeBtn.addEventListener('click', () => {
-                    const current = document.documentElement.getAttribute('data-theme') || 'light';
-                    const next = current === 'light' ? 'dark' : 'light';
-                    setTheme(next);
+                    const isDark = document.body.classList.contains('dark');
+                    setTheme(isDark ? 'light' : 'dark');
                 });
             }
         }
 
         function setTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
+            if (theme === 'dark') {
+                document.body.classList.add('dark');
+            } else {
+                document.body.classList.remove('dark');
+            }
             localStorage.setItem('theme', theme);
             const btn = document.getElementById('themeBtn');
-            if (btn) btn.textContent = theme === 'light' ? '☽ Dark' : '☀ Light';
+            if (btn) btn.textContent = theme === 'dark' ? '☀ Light' : '☽ Dark';
         }
 
         // ─── Haiku Gallery ──────────────────────────────────────

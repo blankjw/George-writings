@@ -240,19 +240,24 @@ async function loadBlog() {
 
 // ─── Theme ────────────────────────────────────────────────────
 function initTheme() {
-  const themeBtn = document.getElementById('theme-btn');
+  // Support both #theme-btn (main page) and #theme-toggle (essay pages)
+  const themeBtn = document.getElementById('theme-btn') || document.getElementById('theme-toggle');
   const savedTheme = localStorage.getItem('theme') || 'light';
   setTheme(savedTheme);
   if (themeBtn) themeBtn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'light';
-    const next = current === 'light' ? 'dark' : 'light';
-    setTheme(next);
+    const isDark = document.body.classList.contains('dark');
+    setTheme(isDark ? 'light' : 'dark');
   });
 }
 
 function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
   localStorage.setItem('theme', theme);
-  const btn = document.getElementById('theme-btn');
-  if (btn) btn.textContent = theme === 'light' ? '☽ Dark' : '☀ Light';
+  // Update whichever button exists on this page
+  const btn = document.getElementById('theme-btn') || document.getElementById('theme-toggle');
+  if (btn) btn.textContent = theme === 'dark' ? '☀ Light' : '☽ Dark';
 }
