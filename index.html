@@ -1,126 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>George Gondron — Writings & Reflections</title>
-  <meta name="description" content="A lifetime of philosophical essays, poems, and reflections by George Gondron.">
-  <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>George G. | The Human Condition Series</title>
+  <meta name="description" content="The official author site for George G. and The Human Condition Series — reflective writings on identity, thought, spirit, love, responsibility, and stillness.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="masthead">
-    <div class="masthead-inner">
-      <a href="./" class="masthead-name">George Gondron</a>
-      <ul class="masthead-nav">
-        <li><a href="#writings">Writings</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="haikus.html">Haikus</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-btn">☽ Dark</button></li>
-      </ul>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#top">George G.</a>
+    <nav aria-label="Main navigation">
+      <a href="#books">Books</a>
+      <a href="#about">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="#connect">Connect</a>
+    </nav>
   </header>
 
-  <main>
-
-    <!-- Hero -->
+  <main id="top">
     <section class="hero">
-      <div class="hero-eyebrow">Essays · Poems · Haikus</div>
-      <h1 class="hero-title">A Lifetime of Thought,<br>Written Down</h1>
-      <blockquote class="hero-quote">
-        "We seek without that which can only be found within — a Divine spark, closer to us than we are to ourselves."
-      </blockquote>
-      <cite class="hero-cite">— George Gondron, <em>Yearning</em></cite>
-      <div class="hero-actions">
-        <button id="random-btn" class="btn btn-filled">Read Something</button>
-        <a href="#writings" class="btn btn-ghost">Browse All Writings</a>
-      </div>
-    </section>
-
-    <hr class="rule">
-
-    <!-- Writings: categorized + alphabetical accordion -->
-    <section class="browse" id="writings">
-
-      <div class="browse-header">
-        <h2>Writings</h2>
-        <input type="text" id="search-box" class="search-box" placeholder="Search titles…">
-      </div>
-
-      <!-- Category filter pills -->
-      <div class="filter-pills">
-        <button class="pill active" data-filter="all">All <span class="pill-count" id="count-all"></span></button>
-        <button class="pill" data-filter="essay">Essays <span class="pill-count" id="count-essay"></span></button>
-        <button class="pill" data-filter="poem">Poems <span class="pill-count" id="count-poem"></span></button>
-        <button class="pill" data-filter="haiku">Haikus <span class="pill-count" id="count-haiku"></span></button>
-      </div>
-
-      <!-- Alphabetical accordion -->
-      <div id="writings-accordion"></div>
-
-    </section>
-
-    <hr class="rule">
-
-    <!-- Blog -->
-    <section class="blog-section" id="blog">
-      <div class="section-inner">
-        <h2 class="section-heading">Blog</h2>
-        <div id="blog-list"></div>
-      </div>
-    </section>
-
-    <hr class="rule">
-
-    <!-- About -->
-    <section class="about" id="about">
-      <div class="about-inner">
-        <div class="about-photo">
-          <img src="george.jpg" alt="George Gondron">
-        </div>
-        <div class="about-text">
-          <h2>About George Gondron</h2>
-          <p>George Gondron has spent decades exploring the philosophical and spiritual dimensions of human experience. His writings reflect a lifetime of observation, introspection, and dialogue with the enduring questions of existence.</p>
-          <p>His experiences arise from years as a business professional in our material world, a mental health professional in our interactional world, and a spiritual director in the Christian faith — with a focus on two main aspects of our humanity: the importance of love as an action versus a feeling, and life as a relationship versus a means to an end.</p>
-          <p>Through essays, poems, and reflections, George examines the questions most of us push aside: What does it mean to be conscious? How do we grow beyond our limitations? How do we live authentically?</p>
-          <p>This archive is a gift freely given — a lifetime of thinking, deep reflection, and personal experience, written down for anyone who seeks deeper understanding primarily about themselves and human beings as a whole.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">The Human Condition Series</p>
+        <h1>Quiet reflections for the deeper work of being human.</h1>
+        <p class="lead">The Human Condition Series is a reflective journey through the questions that shape a human life: who we are, how we think, what we seek, how we love, what we value, and how we learn to be still. Written with honesty, tenderness, and hard-earned wisdom, George G.&#x27;s reflections invite readers to slow down and look beneath the surface of ordinary life.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#books">Explore the Books</a>
+          <a class="btn secondary" href="blog.html">Read the Blog</a>
         </div>
       </div>
-    </section>
-
-    <hr class="rule">
-
-    <!-- Contact -->
-    <section class="contact-section" id="contact">
-      <div class="section-inner" style="text-align:center;">
-        <h2 class="section-heading">Contact</h2>
-        <p style="color:var(--ink-mid); margin-bottom:1.5rem;">
-          George welcomes thoughtful correspondence from readers.
-        </p>
-        <a href="https://www.facebook.com/gwgondron" target="_blank" class="btn btn-ghost" style="margin-right:.5rem;">𝑓 Facebook</a>
-        <a href="mailto:ggondron@hotmail.com" class="btn btn-filled">
-          ✉ ggondron@hotmail.com
-        </a>
+      <div class="hero-stack" aria-label="Book cover preview">
+        <img class="cover cover-a" src="assets/book-1.jpg" alt="Who We Think We Are book cover">
+        <img class="cover cover-b" src="assets/book-3.jpg" alt="What We Seek book cover">
+        <img class="cover cover-c" src="assets/book-6.jpg" alt="Listen to the Silence book cover">
       </div>
     </section>
 
+    <section class="quote-band">
+      <p>“For those willing to look beneath the life they were handed, and do the harder work of becoming who they are.”</p>
+    </section>
+
+    <section id="books" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Books</p>
+        <h2>The Human Condition Series</h2>
+        <p>Six volumes drawn from decades of private writings on identity, consciousness, spirit, love, responsibility, and stillness.</p>
+      </div>
+      <div class="book-grid">
+
+        <article class="book-card" id="book-1">
+          <img src="assets/book-1.jpg" alt="Cover of Who We Think We Are" loading="lazy">
+          <div>
+            <p class="eyebrow">Book 1</p>
+            <h3>Who We Think We Are</h3>
+            <p class="subtitle">Identity, Shadow &amp; the Work of Becoming</p>
+            <p>Who am I, really, beneath the masks I wear?</p>
+            <div class="book-actions">
+              <a class="small-btn" href="https://www.amazon.com/dp/B0GVQ91RDY?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank" rel="noopener">Find on Amazon</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" id="book-2">
+          <img src="assets/book-2.jpg" alt="Cover of How We Think" loading="lazy">
+          <div>
+            <p class="eyebrow">Book 2</p>
+            <h3>How We Think</h3>
+            <p class="subtitle">Mind, Knowing &amp; the Discipline of Understanding</p>
+            <p>How do I know what I think I know?</p>
+            <div class="book-actions">
+              <a class="small-btn" href="https://www.amazon.com/dp/B0GVQ91RDY?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank" rel="noopener">Find on Amazon</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" id="book-3">
+          <img src="assets/book-3.jpg" alt="Cover of What We Seek" loading="lazy">
+          <div>
+            <p class="eyebrow">Book 3</p>
+            <h3>What We Seek</h3>
+            <p class="subtitle">Spirit, Mystery &amp; the Search for God</p>
+            <p>What is the soul reaching toward?</p>
+            <div class="book-actions">
+              <a class="small-btn" href="https://www.amazon.com/dp/B0GVQ91RDY?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank" rel="noopener">Find on Amazon</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" id="book-4">
+          <img src="assets/book-4.jpg" alt="Cover of Love, Loss &amp; Connection" loading="lazy">
+          <div>
+            <p class="eyebrow">Book 4</p>
+            <h3>Love, Loss &amp; Connection</h3>
+            <p class="subtitle">Relationship, Forgiveness &amp; What Remains</p>
+            <p>The bonds that make us human and what survives their breaking.</p>
+            <div class="book-actions">
+              <a class="small-btn" href="https://www.amazon.com/s?k=Love,+Loss+&amp;+Connection+George+Gondron" target="_blank" rel="noopener">Find on Amazon</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" id="book-5">
+          <img src="assets/book-5.jpg" alt="Cover of The Human Condition" loading="lazy">
+          <div>
+            <p class="eyebrow">Book 5</p>
+            <h3>The Human Condition</h3>
+            <p class="subtitle">How We Live, What We Value &amp; Who We Choose to Be</p>
+            <p>Beyond the inner life — the shared world we build through our choices.</p>
+            <div class="book-actions">
+              <a class="small-btn" href="https://www.amazon.com/dp/B0GVQ91RDY?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank" rel="noopener">Find on Amazon</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" id="book-6">
+          <img src="assets/book-6.jpg" alt="Cover of Listen to the Silence" loading="lazy">
+          <div>
+            <p class="eyebrow">Book 6</p>
+            <h3>Listen to the Silence</h3>
+            <p class="subtitle">Stillness, Gratitude &amp; the Present Moment</p>
+            <p>The quiet center; what remains when the noise falls away.</p>
+            <div class="book-actions">
+              <a class="small-btn" href="https://www.amazon.com/dp/B0GVQ91RDY?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank" rel="noopener">Find on Amazon</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section split">
+      <div>
+        <p class="eyebrow">About the Author</p>
+        <h2>George G.</h2>
+        <p>George G. was born on 04/25/1940. Over the course of a long career that moved from accounting to counseling, he became a student of the inner life, shaped by the work of Virginia Satir, Carl Jung, and a thirty-day silent retreat that changed the direction of his thinking. He wrote for decades without any intention of publication. These reflections were his private way of working through the questions that matter most: truth, human nature, what it means to live well, and what it means to die without regret.</p>
+        <p>Across the series, George writes as a seeker, a counselor, a student of the soul, and a man looking back with humility and hope.</p>
+      </div>
+      <img class="author-photo" src="assets/george-author.jpg" alt="George G. author photo">
+    </section>
+
+    <section id="blog" class="section blog-preview">
+      <div class="section-heading">
+        <p class="eyebrow">Blog</p>
+        <h2>Reflections & updates</h2>
+        <p>A simple blog area for excerpts, launch notes, readings, and short reflections from the series.</p>
+      </div>
+      <div class="posts">
+        <article>
+          <p class="date">Coming soon</p>
+          <h3>Why these writings matter now</h3>
+          <p>A launch essay introducing George's body of work and the heart behind the series.</p>
+          <a href="blog.html">View blog</a>
+        </article>
+        <article>
+          <p class="date">Coming soon</p>
+          <h3>A daily reflection from George</h3>
+          <p>A short excerpt format that can tie into the Daily Reflections book and email/social posts.</p>
+          <a href="blog.html">View blog</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="connect" class="section connect-card">
+      <p class="eyebrow">Connect</p>
+      <h2>Follow George and stay in the loop.</h2>
+      <p>Facebook, blog updates, and book launch links live here. Facebook URL is ready to wire in as soon as we confirm George’s exact profile or page.</p>
+      <div class="cta-row">
+        <a class="btn secondary" href="https://www.facebook.com/gwgondron" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn primary" href="blog.html">Visit the Blog</a>
+        <a class="btn secondary" href="mailto:?subject=George%20G.%20Books&body=Here%20is%20George%20G.%27s%20book%20site:%20">Share</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <p class="footer-name">George Gondron — Writings & Reflections</p>
-    <p>698 essays, poems, and haikus · Updated March 2026</p>
-    <p style="margin-top:.8rem;">
-      <a href="mailto:ggondron@hotmail.com">ggondron@hotmail.com</a>
-      &nbsp;·&nbsp;
-      <a href="https://www.facebook.com/gwgondron" target="_blank">Facebook</a>
-      &nbsp;·&nbsp;
-      <a href="https://github.com/blankjw/George-writings">GitHub</a>
-    </p>
+  <footer>
+    <p>© 2026 The Writings of George G. · The Human Condition Series</p>
   </footer>
-
-  <script src="js/app.js"></script>
 </body>
 </html>
