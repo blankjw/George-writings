@@ -21,28 +21,37 @@
     <section class="page-hero">
       <p class="eyebrow">Blog</p>
       <h1>Reflections & updates</h1>
-      <p class="lead">A flexible home for book announcements, launch updates, short readings, Daily Reflections excerpts, and posts that can be shared to Facebook.</p>
+      <p class="lead">Book announcements, short reflections, Daily Reflections excerpts, and posts from George G.</p>
     </section>
-    <section class="section posts-list">
+    <section class="section posts-list" id="posts">
       <article>
-        <p class="date">Draft placeholder</p>
-        <h2>Start Here: The Human Condition Series</h2>
-        <p>The opening post should introduce the six-book arc and invite readers to begin wherever the question meets them: self, mind, spirit, relationship, responsibility, or stillness.</p>
-      </article>
-      <article>
-        <p class="date">Draft placeholder</p>
-        <h2>Daily Reflection: Hope</h2>
-        <p>Use this format for a short quote or excerpt, followed by one question for the reader. This also gives us clean material to cross-post on Facebook.</p>
-      </article>
-      <article>
-        <p class="date">Draft placeholder</p>
-        <h2>Book Launch Update</h2>
-        <p>Use this post type when a new KDP listing goes live. Add the purchase link, a short book description, and a note from the family.</p>
+        <p class="date">Coming soon</p>
+        <h2>Blog updater pending deployment</h2>
+        <p>The private editor is built and ready to deploy. Published posts will appear here automatically once the feed URL is connected.</p>
       </article>
     </section>
   </main>
   <footer>
     <p>© 2026 The Writings of George G. · <a href="index.html">Back to home</a></p>
   </footer>
+  <script>
+    // Replace after Apps Script deployment: https://script.google.com/macros/s/.../exec?mode=feed
+    const BLOG_FEED_URL = 'https://script.google.com/macros/s/AKfycbwARUmfUQCTdsq0HOKmzdJEC3bkTQzY8Bfwq-IwMqNUMFcTcM_nVNPrHJJC5jabTScr/exec?blog=feed';
+    const postsEl = document.getElementById('posts');
+    function esc(s){ return String(s||'').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+    function paragraphs(text){ return String(text||'').split(/\n\s*\n/).filter(Boolean).map(p => `<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join(''); }
+    function renderPosts(posts){
+      if (!posts || !posts.length) return;
+      postsEl.innerHTML = posts.map(post => `<article id="${esc(post.slug || post.id)}">
+        <p class="date">${esc(post.date || '')}</p>
+        <h2>${esc(post.title)}</h2>
+        ${post.excerpt ? `<p><strong>${esc(post.excerpt)}</strong></p>` : ''}
+        ${paragraphs(post.body)}
+      </article>`).join('');
+    }
+    if (BLOG_FEED_URL) {
+      fetch(BLOG_FEED_URL).then(r => r.json()).then(data => renderPosts(data.posts || [])).catch(() => {});
+    }
+  </script>
 </body>
 </html>
