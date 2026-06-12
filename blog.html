@@ -40,13 +40,18 @@
     const postsEl = document.getElementById('posts');
     function esc(s){ return String(s||'').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
     function paragraphs(text){ return String(text||'').split(/\n\s*\n/).filter(Boolean).map(p => `<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join(''); }
+    function renderBody(body){
+      const html = String(body || '');
+      if (/<(p|br|div|strong|b|em|i|ul|ol|li|blockquote|h2|h3|figure|figcaption|img|a)\b/i.test(html)) return html;
+      return paragraphs(html);
+    }
     function renderPosts(posts){
       if (!posts || !posts.length) return;
       postsEl.innerHTML = posts.map(post => `<article id="${esc(post.slug || post.id)}">
         <p class="date">${esc(post.date || '')}</p>
         <h2>${esc(post.title)}</h2>
         ${post.excerpt ? `<p><strong>${esc(post.excerpt)}</strong></p>` : ''}
-        ${paragraphs(post.body)}
+        <div class="post-body">${renderBody(post.body)}</div>
       </article>`).join('');
     }
     if (BLOG_FEED_URL) {
