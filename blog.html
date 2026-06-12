@@ -41,8 +41,10 @@
     function esc(s){ return String(s||'').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
     function paragraphs(text){ return String(text||'').split(/\n\s*\n/).filter(Boolean).map(p => `<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join(''); }
     function normalizeImages(html){
-      return String(html || '').replace(/https:\/\/drive\.google\.com\/uc\?export=view&amp;id=([^"'&<]+)/g, 'https://drive.google.com/thumbnail?id=$1&amp;sz=w1600')
-        .replace(/https:\/\/drive\.google\.com\/uc\?export=view&id=([^"'&<]+)/g, 'https://drive.google.com/thumbnail?id=$1&sz=w1600');
+      return String(html || '').replace(/https:\/\/drive\.google\.com\/uc\?export=view&amp;id=([^"'&<]+)/g, 'https://drive.google.com/thumbnail?id=$1&amp;sz=w2400')
+        .replace(/https:\/\/drive\.google\.com\/uc\?export=view&id=([^"'&<]+)/g, 'https://drive.google.com/thumbnail?id=$1&sz=w2400')
+        .replace(/https:\/\/drive\.google\.com\/thumbnail\?id=([^"'&<]+)&amp;sz=w1600/g, 'https://drive.google.com/thumbnail?id=$1&amp;sz=w2400')
+        .replace(/https:\/\/drive\.google\.com\/thumbnail\?id=([^"'&<]+)&sz=w1600/g, 'https://drive.google.com/thumbnail?id=$1&sz=w2400');
     }
     function renderBody(body){
       const html = normalizeImages(body);
