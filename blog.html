@@ -40,8 +40,12 @@
     const postsEl = document.getElementById('posts');
     function esc(s){ return String(s||'').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
     function paragraphs(text){ return String(text||'').split(/\n\s*\n/).filter(Boolean).map(p => `<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join(''); }
+    function normalizeImages(html){
+      return String(html || '').replace(/https:\/\/drive\.google\.com\/uc\?export=view&amp;id=([^"'&<]+)/g, 'https://drive.google.com/thumbnail?id=$1&amp;sz=w1600')
+        .replace(/https:\/\/drive\.google\.com\/uc\?export=view&id=([^"'&<]+)/g, 'https://drive.google.com/thumbnail?id=$1&sz=w1600');
+    }
     function renderBody(body){
-      const html = String(body || '');
+      const html = normalizeImages(body);
       if (/<(p|br|div|strong|b|em|i|ul|ol|li|blockquote|h2|h3|figure|figcaption|img|a)\b/i.test(html)) return html;
       return paragraphs(html);
     }
